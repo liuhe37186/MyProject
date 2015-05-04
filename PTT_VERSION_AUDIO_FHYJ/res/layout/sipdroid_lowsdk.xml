@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     * Copyright (C) 2009 The Sipdroid Open Source Project * * This file 
+	is part of Sipdroid (http://www.sipdroid.org) * * Sipdroid is free software; 
+	you can redistribute it and/or modify * it under the terms of the GNU General 
+	Public License as published by * the Free Software Foundation; either version 
+	3 of the License, or * (at your option) any later version. * * This source 
+	code is distributed in the hope that it will be useful, * but WITHOUT ANY 
+	WARRANTY; without even the implied warranty of * MERCHANTABILITY or FITNESS 
+	FOR A PARTICULAR PURPOSE. See the * GNU General Public License for more details. 
+	* * You should have received a copy of the GNU General Public License * along 
+	with this source code; if not, write to the Free Software * Foundation, Inc., 
+	59 Temple Place, Suite 330, Boston, MA 02111-1307 USA ///////////////////////////////////////////////////////////////////// 
+	// these are the main definitions of Sipdroid // for modifying them additional 
+	terms according to section 7, GPL apply // see ADDITIONAL_TERMS.txt /////////////////////////////////////////////////////////////////////
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <!-- 通话记录 -->
+
+            <include
+                android:id="@+id/call_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="55dip"
+                layout="@layout/call_history"
+                android:gravity="top" />
+
+            <View
+                android:id="@+id/call_history_coverview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#99000000" />
+
+            <!-- 键盘 -->
+
+            <include
+                android:id="@+id/call_keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                layout="@layout/call_keyboard"
+                android:gravity="bottom" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_gravity="top"
+                android:background="@color/whole_bg"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="66dip"
+                    android:layout_height="36dip"
+                    android:layout_marginLeft="3dip"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/search_edittext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:layout_marginRight="8.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/recents"
+                    android:textColor="@color/font_color3"
+                    android:textSize="20.0dip" />
+
+                <ImageView
+                    android:id="@+id/keyboard_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:src="@drawable/keyboardup_release" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <!--
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+     
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+ 
+            <LinearLayout
+                android:id="@+id/call_controlviews"
+                android:layout_width="fill_parent"
+                android:layout_height="60dip"
+                android:layout_marginTop="1dip"
+                android:layout_weight="1"
+                android:background="@color/holo_blue_light"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/hide_keyboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/backround_light_white"
+                    android:clickable="true"
+                    android:paddingBottom="18dip"
+                    android:paddingTop="18dip"
+                    android:src="@drawable/ic_dialpad_holo_dark_hide" />
+
+                <ImageButton
+                    android:id="@+id/psearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/backround_light_white"
+                    android:clickable="true"
+                    android:paddingBottom="18dip"
+                    android:paddingTop="18dip"
+                    android:src="@drawable/ic_dial_action_search" />
+
+                <ImageButton
+                    android:id="@+id/pphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/backround_light_white"
+                    android:paddingBottom="11dip"
+                    android:paddingTop="11dip"
+                    android:src="@drawable/ic_dial_action_call"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/video_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/backround_light_white"
+                    android:paddingBottom="11dip"
+                    android:paddingTop="11dip"
+                    android:src="@drawable/dial_action_videocall" />
+
+                <ImageButton
+                    android:id="@+id/num_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/backround_light_white"
+                    android:paddingBottom="18dip"
+                    android:paddingTop="18dip"
+                    android:src="@drawable/ic_add_contact" />
+            </LinearLayout>
+ 
+            <LinearLayout
+                android:id="@+id/call_controlviews_nokeyboard"
+                android:layout_width="fill_parent"
+                android:layout_height="60dip"
+                android:layout_marginTop="1dip"
+                android:layout_weight="1"
+                android:background="@color/holo_blue_light"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/call_show_keyboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/backround_light_white"
+                    android:clickable="true"
+                    android:paddingBottom="18dip"
+                    android:paddingTop="18dip"
+                    android:src="@drawable/ic_dialpad_holo_dark_show" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/edit_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FF777777"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="1dip" >
+
+                <ImageView
+                    android:id="@+id/edit_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/contact_menu_background"
+                    android:clickable="true"
+                    android:paddingBottom="12dip"
+                    android:paddingTop="12dip"
+                    android:src="@drawable/ic_contact_edit_ok"
+                    android:visibility="visible" />
+            </LinearLayout> 
+        </FrameLayout>
+    </LinearLayout>
+    -->
+
+</RelativeLayout>

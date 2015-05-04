@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2007 The Android Open Source Project
+ * Copyright (C) 2009 The Sipdroid Open Source Project
+ * 
+ * This file is part of Sipdroid (http://www.sipdroid.org)
+ * 
+ * Sipdroid is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This source code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this source code; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+-->
+
+<resources>
+    <!-- MemberList onLine status.  add by lwang 2014-11-25-->
+    <color name="onLine">#FF0000</color>
+    <color name="notOnLine">#ffffff</color>
+    
+	<color name="white">#ffffffff</color>
+    <!-- In-call UI -->
+    <!-- <color name="incall_textConnected">#99CE3F</color>  green -->
+    <color name="incall_textConnected">#40CEA3</color>
+    <color name="incall_textEnded">#FF6072</color>
+    <!-- red -->
+    <color name="incall_textOnHold">#FF9524</color>
+    <color name="exit_login_red">#aaFF0000</color>
+    <color name="dilog_title_red">#960807</color>
+    <!-- orange -->
+	<color name="font_color">#c2c3c5</color>
+	<color name="font_color2">#969799</color>
+	<color name="font_color3">#565759</color>
+	<color name="font_color4">#D6d7DB</color>
+	<color name="black">#000000</color>
+	<color name="black_">#80000000</color>
+	<color name="red">#be0909</color>
+    <!-- DTMF Dialer -->
+    <color name="dtmf_dialer_background">#333333</color>
+    <!-- green -->
+
+    <color name="dongfu_shen">#2c71a8</color>
+
+    <!-- FROM PHONE 20130309 OUMOGANG -->
+    <color name="dialer_matchHighlight">#ffeecf6a</color>
+    <color name="incall_callTypeSip">#ff99ce3f</color>
+    <color name="incall_call_banner_background">#a0000000</color>
+    <color name="incall_call_state_label_background">#8033b5e5</color>
+    <color name="incall_call_banner_text_color">#ffffffff</color>
+    <color name="dtmf_dialer_display_text">#ffffffff</color>
+    <color name="people_app_theme_color">#ff33b5e5</color>
+    <color name="recording_time_elapsed_text">#FFFFFFFF</color>
+    <color name="recording_time_remaining_text">#FFFF0033</color>
+    <color name="bright_foreground_dark">#ffffffff</color>
+    <color name="holo_black_light">#ff555555</color>
+    <color name="light_white">#FFDEDEDE</color>
+    <color name="holo_green_dark">#FF008f00</color>
+    <color name="text_color">#FF000000</color>
+    <color name="text_color_black">#FF000000</color>
+    <color name="text_color_white">#FFFFFFFF</color>
+    <color name="tab_wihte">#ffffff</color>
+    <color name="disable_color">#90ffffff</color>
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <color name="white_diy">#bbffffff</color>
+    <color name="group_right">#EBF1DE</color>
+    <color name="group_left">#C4BD97</color>
+    <color name="group_name_no_selected">#2D97B4</color>
+    <color name="group_name_selected">#254B7A</color>
+    <color name="group_speaker_status">#DADADA</color>
+    <color name="loginoutnormal">#be0a0b</color>
+    <color name="loginoutpress">#76797f</color>
+    
+
+    <color name="btn_click_bg">#969799</color>
+    <color name="whole_bg">#d6d7db</color>
+</resources>

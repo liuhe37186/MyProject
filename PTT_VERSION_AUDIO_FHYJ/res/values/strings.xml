@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2009 The Sipdroid Open Source Project
+ *
+ * This file is part of Sipdroid (http://www.sipdroid.org)
+ *
+ * Sipdroid is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This source code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this source code; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+////////////////////////////////////////////////////////////////////////////////////
+// Simplified Chinese language file by Vantonio.
+// If there should be any problems please email me
+// at nio.von@gmail.com or report it at http://www.sipdroid.org
+/////////////////////////////////////////////////////////////////////
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">集群通</string>
+    <string name="pstn_name">电话</string>
+    <string name="sip_name">集群通，当可用时</string>
+    <string name="about">\n版本 ${VERSION}
+\n</string>
+    <string name="reg">正在登录...</string>
+    <string name="regok">登录成功</string>
+    <string name="regfailed">登录失败</string>
+    <string name="voicemail">语音留言：</string>
+    <string name="auto_enabled">自动应答/扬声器</string>
+    <string name="auto_disabled">自动应答关闭</string>
+    <string name="hint">SIP地址</string>
+    <string name="hint2">电话号码</string>
+    <string name="empty">请输入一个类似于name@domain.com的SIP地址</string>
+    <string name="notfast">无适用的网络</string>
+    <string name="settings_account">SIP账户设置</string>
+    <string name="settings_username">认证用户名</string>
+    <string name="settings_line">Line</string>
+    <string name="settings_password">密码</string>
+    <string name="settings_server">服务器</string>
+    <string name="settings_domain">域</string>
+    <string name="settings_domain2">如与服务器相同请留空</string>
+    <string name="settings_username1">用户名/Caller ID</string>
+    <string name="settings_callerid2">如与认证用户名一致请留空</string>
+    <string name="settings_port">端口</string>
+
+    <string-array name="port_display_values">
+        <item>53</item>
+        <item>69</item>
+        <item>80</item>
+        <item>135</item>
+        <item>161</item>
+        <item>443</item>
+        <item>500</item>
+        <item>1433</item>
+        <item>1701</item>
+        <item>1812</item>
+        <item>3389</item>
+        <item>4500</item>
+        <item>5060 (标准)</item>
+        <item>5061</item>
+        <item>5900</item>
+        <item>16999</item>
+        <item>26999</item>
+        <item>36999</item>
+        <item>自定义</item>
+    </string-array>
+    <string-array name="port_values">
+        <item>53</item>
+        <item>69</item>
+        <item>80</item>
+        <item>135</item>
+        <item>161</item>
+        <item>443</item>
+        <item>500</item>
+        <item>1433</item>
+        <item>1701</item>
+        <item>1812</item>
+        <item>3389</item>
+        <item>4500</item>
+        <item>5060</item>
+        <item>5061</item>
+        <item>5900</item>
+        <item>16999</item>
+        <item>26999</item>
+        <item>36999</item>
+        <item>0</item>
+    </string-array>
+
+    <string name="settings_protocol">协议</string>
+
+    <string-array name="protocol_display_values">
+        <item>UDP (3G网络下待机时间短)</item>
+        <item>TCP (3G网络下待机时间长)</item>
+    </string-array>
+    <string-array name="protocol_values">
+        <item>udp</item>
+        <item>tcp</item>
+    </string-array>
+
+    <string name="settings_vquality">视频质量</string>
+
+    <string-array name="vquality_display_values">
+        <item>高 (352x288 @ 360kbit)</item>
+        <item>低 (176x144 @ 192kbit)</item>
+    </string-array>
+    <string-array name="vquality_values">
+        <item>high</item>
+        <item>low</item>
+    </string-array>
+
+    <string name="settings_stun">使用STUN服务器</string>
+    <string name="settings_stun_server">STUN服务器地址</string>
+    <string name="settings_stun_server_port">STUN服务器端口</string>
+    <string name="settings_mmtel">使用MMTel技术</string>
+    <string name="settings_mmtel_qvalue">Q值</string>
+    <string name="settings_options">通话选项</string>
+    <string name="settings_wlan">使用Wi-Fi网络</string>
+    <string name="settings_3g">使用3G网络</string>
+    <string name="settings_edge">使用EDGE网络</string>
+    <string name="settings_vpn">使用VPN</string>
+    <string name="settings_check">请确认你的运营商是否允许VoIP电话</string>
+    <string name="settings_vpn2">PBXes提供免费VPN服务，请进入www.pbxes.com并点击HELP获取相关信息。</string>
+    <string name="dialog_default">集群通现在不是默认的电话程序，是否要将其设置为默认？
+\n
+\n如果你选择了 \'否\'，你仍然可以在拨号时在电话号码后加上字符\'+\'，或长按联系人选择 \'发送短信\'以强制使用集群通拨号。</string>
+    <string name="dialog_message">是否查看集群通 1.5的视频介绍？</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="dontask">不再提示</string>
+    <string name="settings_pref">集群通优先级</string>
+    <string name="settings_pref2">在拨号时在电话号码后加上字符\'+\'，或长按联系人选择 \'发送短信\'以强制使用集群通拨号。</string>
+
+    <string-array name="pref_display_values">
+        <item>只使用集群通</item>
+        <item>当可用时使用集群通</item>
+        <item>总是使用电话</item>
+        <item>Always ask</item>
+    </string-array>
+    <string-array name="pref_values">
+        <item>SIPONLY</item>
+        <item>SIP</item>
+        <item>PSTN</item>
+        <item>ASK</item>
+    </string-array>
+
+    <string name="settings_compression">语音压缩</string>
+
+    <string-array name="compression_display_values">
+        <item>仅当使用WLAN时</item>
+        <item>仅当使用WLAN/3G时</item>
+        <item>总是尝试使用</item>
+        <item>从不使用</item>
+    </string-array>
+    <string-array name="compression_values">
+        <item>wlan</item>
+        <item>wlanor3g</item>
+        <item>always</item>
+        <item>never</item>
+    </string-array>
+
+    <string name="settings_auto_on">开启自动应答</string>
+    <string name="settings_auto_on2">振动提醒，仅用于非锁定状态下</string>
+    <string name="settings_auto_ondemand">快速切换自动应答</string>
+    <string name="settings_auto_ondemand2">在状态栏显示切换按钮</string>
+    <string name="settings_auto_headset">耳机插入时自动应答</string>
+    <string name="settings_auto_headset2">当耳机插入时开启自动应答</string>
+    <string name="settings_callrecord">通话记录</string>
+    <string name="settings_callrecord2">保存通话记录到SD卡</string>
+    <string name="settings_notifications">通知设置</string>
+    <string name="settings_MWI">语音留言</string>
+    <string name="settings_MWI2">自动检查是否有未读的语音留言</string>
+    <string name="settings_reg">登录</string>
+    <string name="settings_reg2">允许选择SIP帐户</string>
+    <string name="settings_notify">未接电话</string>
+    <string name="settings_notify2">使用蓝色LED灯提醒</string>
+    <string name="settings_nodata">无数据</string>
+    <string name="settings_nodata2">使用单音调指示数据包丢失</string>
+    <string name="settings_advanced_options">高级设置</string>
+    <string name="settings_av_options">音频/视频设置</string>
+    <string name="settings_policy_never">改变系统休眠策略以保持Wi-Fi的开启状态</string>
+    <string name="settings_policy_default">重设Wi-Fi休眠设置为系统默认</string>
+    <string name="settings_search">查找和替换</string>
+    <string name="settings_excludepat">排除的正则表达式</string>
+    <string name="settings_sipringtone">SIP铃声</string>
+    <string name="settings_sipringtone2">设置SIP拨入电话的铃声</string>
+    <string name="settings_sipringtone_dialog">铃声</string>
+    <string name="settings_eargain">听筒音量</string>
+    <string name="settings_micgain">麦克风音量</string>
+    <string name="settings_heargain">耳机音量</string>
+    <string name="settings_hmicgain">耳机麦克风音量</string>
+
+    <string-array name="eargain_display_values">
+        <item>低 (无回音)</item>
+        <item>中</item>
+        <item>高 (可能会出现回音)</item>
+        <item>极高</item>
+    </string-array>
+    <string-array name="eargain_values">
+        <item>0.1</item>
+        <item>0.25</item>
+        <item>0.5</item>
+        <item>1.0</item>
+    </string-array>
+
+    <string name="settings_pbxes_options">PBXes设置</string>
+    <string name="settings_par">多个拨出电话</string>
+    <string name="settings_par2">允许同时拨打多个电话</string>
+    <string name="settings_improve">音质优化</string>
+    <string name="settings_improve2">需要收费帐号</string>
+    <string name="settings_hdvoice">PBXes支持高清语音</string>
+    <string name="settings_posurl">地理位置及回拨URL地址</string>
+    <string name="settings_pos">更新地理位置</string>
+    <string name="settings_pos2">地址可被通报至PBXes的联系人(需要PBXes.com的Premium账户)</string>
+    <string name="settings_pos3">正在更新地理位置</string>
+    <string name="settings_callback">触发回拨</string>
+    <string name="settings_callback2">如没有合适的网络时</string>
+    <string name="settings_callthru">触发Callthru</string>
+    <string name="settings_callthru2">Callthru前缀</string>
+    <string name="settings_title">集群通设置</string>
+    <string name="settings_profile_title">集群通设置 (<xliff:g id="profile">%s</xliff:g>)</string>
+    <string name="settings_profile_menu_import">导入</string>
+    <string name="settings_profile_menu_export">导出</string>
+    <string name="settings_profile_menu_delete">删除</string>
+    <string name="settings_profile_dialog_profiles_title">用户配置</string>
+    <string name="settings_profile_dialog_delete_title">删除用户配置</string>
+    <string name="settings_profile_dialog_delete_text">确认要删除用户<xliff:g id="profile">%s</xliff:g>的配置吗?</string>
+    <string name="settings_profile_export_error">导出用户配置失败！</string>
+    <string name="settings_profile_import_error">导入用户配置失败！</string>
+    <string name="settings_profile_delete_error">删除用户配置失败！</string>
+    <string name="settings_profile_delete_confirmation">成功删除用户配置。</string>
+    <string name="settings_wireless_options">Wi-Fi设置</string>
+    <string name="settings_bluetooth">需要Android 2.2或更高</string>
+    <string name="settings_keepon">屏幕常亮</string>
+    <string name="settings_keepon2">一些设备需要选择此项以保持Wi-Fi连接</string>
+    <string name="settings_selectwifi">选择Wi-Fi热点</string>
+    <string name="settings_selectwifi2">根据信号选择热点</string>
+    <string name="settings_ownwifi">Wi-Fi电力控制</string>
+    <string name="settings_ownwifi2">节约电力</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_exit">退出</string>
+    <string name="menu_about">关于</string>
+    <string name="menu_dtmf">发送DTMF</string>
+    <string name="menu_video">发送视频</string>
+    <string name="menu_call">呼叫</string>
+    <string name="menu_mute">静音</string>
+    <string name="menu_hold">保持</string>
+    <string name="menu_transfer">转移</string>
+    <string name="menu_speaker">扬声器</string>
+    <string name="menu_endCall">挂断</string>
+    <string name="menu_answer">应答</string>
+    <string name="menu_bluetooth">蓝牙(实验功能)</string>
+    <string name="transfer_title">将通话转移至</string>
+    <string name="card_title_dialing">拨号中</string>
+    <string name="card_title_in_progress">通话中</string>
+    <string name="card_title_incoming_call">来电</string>
+    <string name="card_title_call_ended">通话结束</string>
+    <string name="card_title_ended_no_codec">错误：音频编解码器不兼容</string>
+    <string name="card_title_on_hold">通话保持中</string>
+    <string name="unknown">未知</string>
+    <string name="slide_hint_down_to_end_call">向下滑动以结束通话</string>
+    <string name="slide_hint_up_to_answer">向上滑动以接通来电</string>
+    <string name="ongoing">当前通话</string>
+    <string name="onHold">已保持</string>
+    <string name="codecs">音频解编码器</string>
+    <string name="codecs_summary">设置要使用的音频解编码器及其优先级</string>
+    <string name="codecs_move">移动解编码器</string>
+    <string name="codecs_move_up">上移</string>
+    <string name="codecs_move_down">下移</string>
+    <string name="help_speakerphone">按住音量键以强制通话</string>
+    <string name="menu_register">Register VideoSMS feature</string>
+    <string name="privatecall_default_dialog">Please enter the call number:</string>
+    <!-- houyuchun modify 20120620 begin -->
+    <string name="msg_num">Number</string>
+    <!-- houyuchun add 20120620 begin -->
+    <string name="group_call">对讲</string>
+    <string name="single_call">视频</string>
+    <string name="message">短消息</string>
+    <string name="current_group">当前组:</string>
+    <string name="group_status">组状态:</string>
+    <string name="speaker">讲话人:</string>
+    <string name="switch_group_1">切换组</string>
+    <string name="member_list_1">成员列表</string>
+    <string name="about_info">关于</string>
+    <string name="exit">退出</string>
+    <string name="group_choose">请选择组:</string>
+    <string name="member_name">成员名称</string>
+    <string name="member_number">电话</string>
+    <string name="member_status">状态</string>
+    <string name="menu_add">添加</string>
+    <string name="menu_delete">删除</string>
+    <string name="menu_modify">修改</string>
+    <string name="toast_choose_member">请先选择您要呼叫的号码。</string>
+    <string name="add_contact_1">添加联系人</string>
+    <string name="contact_name">姓名:</string>
+    <string name="contact_number">电话:</string>
+    <string name="menu_ok">切换</string>
+    <string name="menu_cancel">忽略</string>
+    <string name="toast_null_name_or_number">联系人姓名或者电话不能为空！</string>
+    <string name="modify_contact">修改联系人信息</string>
+    <string name="menu_clear_log">清空记录</string>
+    <string name="hint_to">收件人:</string>
+    <string name="hint_content">内容:</string>
+    <string name="status_close">关闭</string>
+    <string name="status_free">空闲</string>
+    <string name="status_speaking">讲话</string>
+    <string name="status_listening">听讲</string>
+    <string name="status_waiting">排队</string>
+    <string name="status_error">未知状态</string>
+    <string name="none_speaker">无</string>
+    <string name="self_speaker">(自己)</string>
+    <string name="toast_null_contact">收件人不能为空！</string>
+    <string name="toast_null_content">信息内容不能为空！</string>
+    <string name="toast_message_sent_fail">信息发送失败！</string>
+    <string name="hint_message_history">当前无任何消息记录。</string>
+    <string name="settings_group_call">对讲设置</string>
+    <string name="settings_high_priority">高优先级</string>
+    <string name="settings_same_priority">相同优先级</string>
+    <string name="settings_low_priority">低优先级</string>
+    <string name="settings_auto_run_title">开机自动运行</string>
+    <string name="settings_auto_run_summary">是否开机自动运行</string>
+    <string name="settings_gps_notify_title">GPS 信息提示</string>
+    <string name="settings_gps_notify_summary">是否开启GPS信息提示</string>
+    <string name="notification_new_message">新短消息</string>
+    <!-- houyuchun add 20120620 end -->
+    <string name="call_voicecalling">voice call</string>
+    <string name="call_videocome">videocome...</string>
+    <string name="call_voicecome">voicecome...</string>
+    <string name="call_calling">video calling...</string>
+    <string name="call_videocalling">video call</string>
+    <string name="groupstate">组名：</string>
+    <string name="msg_send">发送信息</string>
+    <string name="msg_msghistory">信息记录</string>
+    <string name="cameracall_screen">full screen</string>
+    <string name="cameracall_holdon">hold on</string>
+    <string name="msg_book">联系人</string>
+    <string name="makecall">呼叫</string>
+    <string name="moncamera">Terminal Use Camera</string>
+    <string name="contactor">联系人</string>
+    <string name="contact_history">通话记录</string>
+    <string name="notify_group_call">有呼叫，是否切换组？</string>
+    <string name="video_720">720P(1280*720)</string>
+    <string name="video_d1">D1(704*576)</string>
+    <string name="video_cif">QVGA(320*240)</string>
+    <string name="video_qcif">QCIF(176*144)</string>
+    <string name="video_relcif">CIF(352*288)</string>
+    <string name="video_relvga">VGA(640*480)</string>
+    <string name="notify_message">信息提示</string>
+    <!-- houyuchun add 20120620 end -->
+    <string name="video_frontqvga">QVGA(240*320)</string>
+    <string name="video_frontcif">CIF(288*352)</string>
+    <string name="video_frontd1">D1(576*704)</string>
+    <string name="video_frontqcif">QCIF(144*176)</string>
+    <string name="usevideo">Default Camera</string>
+    <string name="phonevideo_setting">PhoneVideo Setting</string>
+    <string name="videoresolution_setting">Video Resolution Setting</string>
+
+    <!-- 对讲来电设置   add by oumogang 2013-01-05 -->
+    <string name="groupCallSetting_title">group call income process</string>
+    <string name="groupCallSetting_summary">high priority,same priority and low priority</string>
+    <string name="groupCallSetting_dialogTitle">how to process group call income </string>
+    <!-- 高优先级-对讲来电设置 -->
+    <string name="groupCallSetting_hight_priority_title">high priority group call</string>
+    <string name="groupCallSetting_hight_priority_dialogTitle">high priority group call income</string>
+    <!-- 同优先级-对讲来电设置 -->
+    <string name="groupCallSetting_same_priority_title">same priority group call</string>
+    <string name="groupCallSetting_same_priority_dialogTitle">same priority group call income</string>
+    <!-- 低优先级-对讲来电设置 -->
+    <string name="groupCallSetting_low_priority_title">low priority group call</string>
+    <string name="groupCallSetting_low_priority_dialogTitle">low priority group call income</string>
+    <!-- summary for i18n -->
+    <string name="groupCallSetting_notice">show it to me</string>
+    <string name="groupCallSetting_answer">auto answer it</string>
+    <string name="groupCallSetting_reject">auto reject it</string>
+
+    <!-- 定位模式设置 -->
+    <string name="autoRun_title">run after boot</string>
+    <string name="autoRun_dialogTitle">run after boot</string>
+    <string name="locateModle_title">定位模式设置</string>
+    <!-- ptime设置 -->
+    <string name="ptimeModle_title">PTIME设置</string>
+    <string name="locateModle_summary">Change position mode settings</string>
+    <string name="locateModle_dialogTitle">select position mode settings</string>
+    <string name="ptimeModle_summary">20ms</string>
+    <string name="ptimeModle_dialogTitle">选择PTIME模式</string>
+    <string name="locateModle_cell">cell only</string>
+    <string name="locateModle_none">none</string>
+    <!-- GPS设置,改成“提示设置” -->
+    <string name="toastPreferenceScreen_title">Toast提示设置</string>
+    <!-- 1.GPS搜星失败提示设置 -->
+    <string name="gpsGetingFailedToast_title">GPS搜星失败提示</string>
+    <string name="gpsGetingFailedToast_summary">是否禁用GPS搜星失败提示</string>
+    <string name="gpsGetingFailedToast_dialogTitle">GPS搜星失败提示</string>
+    <!-- 2. GPS登录错误提示设置 -->
+    <string name="gpsLoginFailedToast_title">GPS登录错误提示</string>
+    <string name="gpsLoginFailedToast_summary">是否禁用GPS登录错误提示</string>
+    <string name="gpsLoginFailedToast_dialogTitle">GPS登录错误提示</string>
+
+    <!-- 位置提示设置 -->
+    <string name="locateToast_title">BDGPS信息提示设置</string>
+    <string name="locateToast_summary">是否需要周期提示当前位置信息</string>
+    <string name="locateToast_dialogTitle">修改提示模式</string>
+
+    <!-- 关于 -->
+    <string name="about_title">关于</string>
+
+    <!-- 版本号 -->
+    <string name="version_title">集群通版本</string>
+
+    <!-- mogang add 20121119 end -->
+
+
+    <!-- amr mode add by oumogang 2012-12-25 -->
+    <string name="gps_toast_title">GPS toast</string>
+    <string name="bdgps_toast_title">cell toast</string>
+    <string name="location_upload_toast_title">upload location</string>
+    <string name="amrMode_title">AMR速率设置</string>
+    <string name="amrMode_summary">12.2kbit/s</string>
+    <string name="amrMode_dialogTitle">选择AMR语音速率</string>
+    <string name="video_720gvs">720p(1080*720)</string>
+    <string name="video_backqvga">QVGA(320*240)</string>
+    <string name="description_image_button_one">one</string>
+    <string name="description_image_button_two">two</string>
+    <string name="description_image_button_three">three</string>
+    <string name="description_image_button_four">four</string>
+    <string name="description_image_button_five">five</string>
+    <string name="description_image_button_six">six</string>
+    <string name="description_image_button_seven">seven</string>
+    <string name="description_image_button_eight">eight</string>
+    <string name="description_image_button_nine">nine</string>
+    <string name="description_image_button_star">star</string>
+    <string name="description_image_button_zero">zero</string>
+    <string name="description_image_button_pound">pound</string>
+    <string name="description_search_button">search</string>
+    <string name="description_dial_button">dial</string>
+    <string name="description_delete_button">backspace</string>
+    <string name="video_backcif">CIF(352*288)</string>
+    <string name="video_4cif">D1(704*576)</string>
+    <string name="video_backd1">D1(704*576)</string>
+    <string name="video_back720p">720p(1280*720)</string>
+    <string name="video_stop">stop video</string>
+    <string name="video_start">start video</string>
+    <string name="flowOnOff_title">速率监测悬浮窗</string>
+    <string name="flowOnOff_summaryOn">已开启</string>
+    <string name="flowOnOff_summaryOff">已关闭</string>
+    <string name="log_summarytitle">Log lock</string>
+    <string name="cameracall_startfail">camera start fail,try later</string>
+    <string name="cameracall_camerarestart">camera restart</string>
+    <string name="cameracall_pixsupport">not support this pix</string>
+    <string name="sipdroid_search">search</string>
+    <string name="sipdroid_existline">has exist a line</string>
+    <string name="sipdroid_numnull">number is empty</string>
+    <string name="sipdroid_callmyself">you called number is yours</string>
+
+    <!-- mogang add 20130504 begin -->
+    <string name="call_state_audio_incoming">audio call imcoming…</string>
+    <string name="call_state_audio_outgoing">audio call making…</string>
+    <string name="call_state_audio_incall">audio call incall…</string>
+    <string name="call_state_audio_endcall">audio call endcall</string>
+    <string name="call_state_audio_hold">audio call hold</string>
+    <string name="call_state_video_incoming">video call imcoming…</string>
+    <string name="call_state_video_outgoing">video call making…</string>
+    <string name="call_state_video_incall">video call incall…</string>
+    <string name="call_state_video_endcall">video call endcall</string>
+    <string name="call_state_video_hold">video call hold</string>
+    <!-- mogang add 20130504 end -->
+	<string name="cameracall_hanguptip">video call can not run in background</string>
+	
+    <!-- add by oumogang 20130504 begin -->
+    <string name="current_group_null">current group:null</string>
+    <string name="group_status_null">group status:null</string>
+    <string name="speaker_null">speaker:null</string>
+    <!-- add by oumogang 20130504 end -->
+	<string name="bad_net_tip">bad network now！</string>
+	<!-- add by oumogang 20130510 begin -->
+    <string name="group_lsit_loading">group list loading…</string>
+     <string name="loading">loading…</string>
+    <!-- add by oumogang 20130510 end -->
+    
+    <!-- add by oumogang 20130521 begin -->
+     <string name="_press_to_speak">press2speak</string>
+    <!-- add by oumogang 20130521 end -->
+    
+    <!-- add by oumogang 20130523 begin -->
+    <string name="add_to_contacts">add to contacts</string>
+    <string name="go_to_contacts">go   to contacts</string>
+    <string name="add_finish">add finish</string>
+    <string name="groups">groups</string>
+    <string name="contacts">contacts</string>
+    <!-- add by oumogang 20130523 end -->
+    
+    <!-- add by oumogang 20130524 begin -->
+    <string name="no_groups">no group for you</string>
+    <!-- add by oumogang 20130524 end -->
+    <string name="videotype">Video coding</string>
+	<string name="videoh264">H264</string>
+	<string name="videoh264s">H264S</string>
+	<string name="videoencodesdp">video encoding is wrong</string>
+	<string name="audiovad">静音检测</string>
+	<string name="phonetype_dialogTitle">phone type</string>
+
+</resources>

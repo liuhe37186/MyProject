@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dip"
+    android:layout_height="230dip"
+    android:layout_gravity="center"
+    android:background="@color/holo_blue_light"
+    android:orientation="vertical"
+    android:theme="@android:style/Theme.Dialog"
+    android:weightSum="1" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFFFF"
+        android:orientation="vertical"
+        android:padding="5dip" >
+
+        <RelativeLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#be0a0b"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notify_message_title"
+                android:textAppearance="?android:attr/textAppearanceLarge" >
+            </TextView>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(8)"
+                android:layout_toRightOf="@id/textView1"
+                android:textAppearance="?android:attr/textAppearanceLarge" >
+            </TextView>
+            
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/notify_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dip"
+                android:gravity="center_horizontal"
+                android:text="@string/notify_message_text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000" >
+            </TextView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip" >
+
+            <Button
+                android:id="@+id/button_ok"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="@string/ok_switch" >
+            </Button>
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/button_ok"
+                android:layout_alignBottom="@+id/button_ok"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:text="@string/cancel_switch" >
+            </Button>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

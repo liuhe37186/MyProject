@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+    <LinearLayout android:id="@+id/compose_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/whole_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="52dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/font_color4"
+            android:id="@+id/btn_home_message2"
+            android:orientation="horizontal"
+            >
+            <TextView android:background="@drawable/map_back_release"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="5dip"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/left_photo3"
+                />
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/photo_sent_home3"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:paddingRight="15dip"
+                android:textColor="@color/font_color3"
+                android:text="@string/back"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/compose_name_title"
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="@string/new_message"
+            android:textColor="@color/font_color3"
+            android:textSize="20.0dip" />
+
+        <LinearLayout  android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:id="@+id/new_group_gps"
+            android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/font_color3"
+            >
+            <ImageView android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:id="@+id/t_add"
+                android:textSize="15sp"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:gravity="center"
+                android:textColor="@color/font_color3"
+                android:src="@drawable/icon_loaction_release"
+                android:background="@color/font_color4"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/llNewMsgTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/font_color"
+        android:layout_below="@id/compose_title"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dip"
+            android:src="@drawable/ic_dial_action_search" 
+            android:background="@drawable/backround_light_white"/>
+
+        <EditText
+            android:id="@+id/edtInputMsger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/contact"
+            android:background="@drawable/info_bg"
+            android:layout_marginLeft="6dip"
+            android:ems="10"
+            android:hint="@string/to"
+            android:maxLines="1"
+            android:numeric="integer" >
+            <requestFocus />
+        </EditText>
+        
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rllMsgBottomBar03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/font_color" >
+
+        <!--
+             <ImageButton
+            android:id="@+id/imbAddPicture"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dip"
+            android:src="@drawable/jiahao" />
+        -->
+
+        <Button
+            android:id="@+id/btnSendMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:padding="3dp"
+            android:background="@drawable/backround_light_white"
+            android:text="@string/send"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edtInputMsg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="15dip"
+            android:layout_toLeftOf="@id/btnSendMsg"
+            android:background="@drawable/info_bg"
+            android:hint="@string/input_message"
+            android:maxLines="3"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

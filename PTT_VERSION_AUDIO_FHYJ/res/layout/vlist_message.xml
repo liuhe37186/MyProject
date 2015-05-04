@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/thread_list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="72dip"
+    android:descendantFocusability="blocksDescendants" >
+
+    <ImageView
+        android:id="@+id/thread_list_item_photoview"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="15.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="15.0dip"
+        android:src="@drawable/title_contact_icon" 
+        android:clickable="false"
+        android:focusable="false"
+        />
+
+    <TextView
+        android:id="@+id/thread_list_item_message_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="43.0dip"
+        android:gravity="center"
+        android:paddingBottom="0.0dip"
+        android:paddingLeft="0.0dip"
+        android:paddingRight="0.0dip"
+        android:paddingTop="3.0dip"
+        android:text="12"
+        android:textColor="#ffffffff"
+        android:textSize="9.0sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/thread_list_item_message_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="9.0dip"
+        android:layout_toLeftOf="@+id/thread_list_item_user_state_group"
+        android:layout_toRightOf="@+id/thread_list_item_photoview"
+        android:ellipsize="end"
+        android:gravity="top"
+        android:singleLine="true"
+        android:textColor="#ff222222"
+        android:textSize="17.0sp" />
+
+    <ImageView
+        android:id="@+id/thread_list_item_message_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12.0dip"
+        android:layout_toRightOf="@+id/thread_list_item_photoview"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/thread_list_item_message_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/thread_list_item_message_summary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/thread_list_item_photoview"
+        android:layout_alignParentBottom="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginBottom="15dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_toLeftOf="@+id/thread_list_item_time"
+        android:layout_toRightOf="@+id/thread_list_item_message_status"
+        android:ellipsize="end"
+        android:gravity="top"
+        android:padding="0.0dip"
+        android:singleLine="true"
+        android:text="message_summary"
+        android:textColor="#ff737373"
+        android:textSize="@dimen/summary_size" />
+
+    <TextView
+        android:id="@+id/thread_list_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/thread_list_item_photoview"
+        android:layout_alignParentBottom="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginBottom="@dimen/photo_bottom"
+        android:layout_marginRight="@dimen/time_right"
+        android:layout_toLeftOf="@+id/thread_list_item_message_checkbox"
+        android:gravity="right"
+        android:singleLine="true"
+        android:text="77777"
+        android:textColor="#ff737373"
+        android:textSize="@dimen/time_size" />
+
+    <LinearLayout
+        android:id="@+id/thread_list_item_user_state_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginRight="@dimen/time_right"
+        android:layout_marginTop="@dimen/user_state_top"
+        android:layout_toLeftOf="@+id/thread_list_item_message_checkbox" >
+
+        <ImageView
+            android:id="@+id/thread_list_item_user_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/user_gap"
+            android:layout_toLeftOf="@+id/thread_list_item_ichat_type"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/thread_list_item_error_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/user_gap"
+            android:layout_toLeftOf="@+id/thread_list_item_user_status"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/thread_list_item_fetion_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/user_gap"
+            android:layout_toLeftOf="@+id/thread_list_item_ichat_type"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/thread_list_item_ichat_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/user_gap"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

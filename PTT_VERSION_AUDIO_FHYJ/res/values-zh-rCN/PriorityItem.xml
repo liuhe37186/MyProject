@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="name_list">
+		<item>提示消息</item>
+		<item>自动接听</item>
+		<item>自动拒绝</item>
+	</string-array>
+	<string-array name="select_list">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	
+	
+	<!-- ptime -->
+	<string-array name="ptime_name_list">
+		<item>20ms</item>
+		<item>100ms</item>
+		<item>200ms</item>
+	</string-array>
+	<string-array name="ptime_select_list">
+		<item>20</item>
+		<item>100</item>
+		<item>200</item>
+	</string-array>
+	
+	
+	
+</resources>

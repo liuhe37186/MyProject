@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/take_photo"
+        android:layout_width="250dip"
+        android:layout_height="50dip"
+        android:gravity="center"
+        android:text="@string/camera"
+        android:textColor="@color/tab_wihte"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="250dip"
+        android:layout_height="1dip"
+        android:background="@color/tab_wihte"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/take_picture"
+        android:layout_width="250dip"
+        android:layout_height="50dip"
+        android:gravity="center"
+        android:text="@string/select_from_album"
+        android:textColor="@color/tab_wihte"
+        android:textSize="15sp" />
+    <!--
+     <TextView 
+        android:layout_height="1dip"
+        android:layout_width="250dip"
+        android:gravity="center"
+        android:background="@color/tab_wihte"
+        />
+     <TextView android:id="@+id/take_cancel"
+        android:layout_height="50dip"
+        android:layout_width="250dip"
+        android:text="取消"
+        android:gravity="center"
+        android:textSize="15sp"
+         android:textColor="@color/red"
+        />
+    -->
+
+</LinearLayout>

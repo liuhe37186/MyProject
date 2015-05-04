@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/directory_bg"
+        android:background="@drawable/directory_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/splash_about_btn"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/pttaboutpress"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+			
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="客服密码："
+                />
+            <EditText 
+                android:id="@+id/editTxt"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:password="true"
+                android:inputType="number"
+                />
+            
+        </LinearLayout>
+         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_marginBottom="80dip"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+			
+			<Button 
+			    android:id="@+id/loginbtn"
+			    android:enabled="false"
+			    android:layout_width="200dp"
+			    android:layout_height="wrap_content"
+			    android:text="@string/login"
+			    />
+
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/directory_about"
+        android:layout_width="fill_parent"
+        android:layout_height="240dip"
+        android:background="@drawable/about"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="15dip"
+            android:layout_marginLeft="10dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/versionshow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="版本：1.2.1.0"
+                android:textColor="#000000"
+                android:textSize="12.5dip" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

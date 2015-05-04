@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:orientation="vertical"
+     android:background="@color/whole_bg"
+    >
+<LinearLayout 
+    	android:id="@+id/li_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_gravity="top"
+        android:background="@color/whole_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="66dip"
+            android:layout_height="36dip"
+            android:layout_marginLeft="3dip"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/search_edittext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginRight="8.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/upload"
+            android:textColor="@color/font_color3"
+            android:textSize="20.0dip" />
+
+        <ImageView
+            android:id="@+id/keyboard_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:src="@drawable/transfer_list_icon_selector" />
+    </LinearLayout>
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:fillViewport="true"
+    android:layout_height="fill_parent" > 
+
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/font_color"
+    android:orientation="vertical" >
+
+    
+	<RelativeLayout 
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:gravity="center_horizontal"
+	    >
+    <LinearLayout android:id="@+id/l_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/font_color2"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:padding="5dip"
+            android:text="@string/send_t"
+            android:textColor="@color/tab_wihte"
+            android:textSize="16sp" />
+
+        <EditText android:id="@+id/transfer_edit_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:hint="@string/dispatch_No."
+            android:inputType="number"/>
+    </LinearLayout>
+    
+
+    <EditText 
+        android:id="@+id/transfer_edit_content"
+        android:layout_width="fill_parent"
+        android:layout_height="150dip"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="30dip"
+        android:gravity="top"
+        android:layout_below="@id/l_photo"
+        android:background="@drawable/background_sytle7"
+        android:padding="2dip"
+        android:hint="@string/write_something"
+        android:textSize="15sp" />
+   
+	</RelativeLayout>
+	<RelativeLayout android:id="@+id/aall"
+        android:layout_width="fill_parent"
+        android:layout_height="180dip"
+        android:layout_below="@id/l_photo"
+        android:gravity="center"
+        android:padding="15dip"
+        >
+
+    <ImageView
+        android:id="@+id/action_imv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/aa_photo_selector" />
+     
+       </RelativeLayout>
+       <RelativeLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+           >
+       <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+	
+        
+
+        <TextView android:id="@+id/photo_send_cancel"
+             android:layout_width="200dip"
+            android:layout_height="40dip"
+            android:layout_gravity="center"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:text="@string/cancel"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/font_color3"
+            android:layout_weight="1" 
+            android:background="@drawable/aa_photo" 
+            android:layout_marginLeft="25dip"/>
+        <LinearLayout
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="5dip"
+            android:padding="5dip"
+            android:textColor="@color/tab_wihte"
+            android:textSize="16sp" />
+
+        <TextView android:id="@+id/photo_send"
+            android:layout_width="200dip"
+            android:layout_height="40dip"
+            android:layout_gravity="center"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:text="@string/send"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/font_color3"
+            android:layout_weight="1" 
+            android:layout_marginRight="25dip"
+            android:background="@drawable/aa_photo"/>
+    </LinearLayout>
+    
+    </RelativeLayout>
+</LinearLayout>
+ </ScrollView> 
+ </LinearLayout> 

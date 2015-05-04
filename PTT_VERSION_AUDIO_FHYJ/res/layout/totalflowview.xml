@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:background="#EBF1DE"
+
+    android:orientation="vertical" >
+
+
+
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+
+        android:layout_height="50.0dip"
+
+        android:background="@drawable/title_backupline"
+
+        android:gravity="center"
+
+        android:orientation="horizontal" >
+
+
+
+        <ImageButton
+
+            android:id="@+id/back_button"
+
+            android:layout_width="66dip"
+
+            android:layout_height="36dip"
+
+            android:layout_marginLeft="3dip" />
+
+
+
+        <TextView
+
+            android:layout_width="fill_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="8.0dip"
+
+            android:layout_marginRight="8.0dip"
+
+            android:layout_weight="1.0"
+
+            android:gravity="center"
+
+            android:text="流量监控"
+
+            android:textColor="@color/white"
+
+            android:textSize="20.0dip" />
+
+
+
+        <ImageButton
+
+            android:layout_width="66dip"
+
+            android:layout_height="36dip"
+
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+
+    <ScrollView
+
+        android:layout_width="fill_parent"
+
+        android:layout_height="fill_parent"
+
+        android:scrollbars="none" >
+
+
+
+        <LinearLayout
+
+            android:layout_width="fill_parent"
+
+            android:layout_height="wrap_content"
+
+            android:background="#EBF1DE"
+
+            android:orientation="vertical"
+
+            android:paddingBottom="10.0dip"
+
+            android:paddingLeft="5.0dip"
+
+            android:paddingRight="5.0dip" >
+
+            
+
+            <LinearLayout 
+
+                android:layout_width="wrap_content"
+
+			    android:layout_height="wrap_content"
+
+                >
+
+                
+
+                
+
+           
+
+
+			<ImageView
+
+			    android:id="@+id/flowiconx"
+
+			    android:layout_width="wrap_content"
+
+			    android:layout_height="wrap_content"
+
+			    android:layout_marginTop="4dp"
+
+			    android:layout_marginLeft="10dp"
+
+			    android:src="@drawable/flowicon" />
+
+			<TextView
+
+			    android:id="@+id/alarmtip"
+
+			    android:layout_width="fill_parent"
+
+			    android:layout_height="wrap_content"
+
+			    android:layout_marginLeft="3dp"
+
+			    android:layout_marginTop="6dp"
+
+			    android:text="本月剩余流量充足，请放心使用"
+
+			    android:textStyle="bold" />
+
+
+
+			 </LinearLayout>
+
+			
+
+            <LinearLayout
+
+                android:layout_width="fill_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+
+                android:background="#ffffff"
+
+                android:orientation="vertical" >
+
+
+
+                <TextView
+
+                    android:id="@+id/detailtip"
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="6dp"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_marginTop="6dp"
+
+                    android:text="已使 xM,剩余x%,剩余日均x分钟"
+
+                    android:textStyle="bold" />
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="1dip"
+
+                    android:background="#eeeeee" >
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:background="@android:drawable/list_selector_background"
+
+                    android:paddingBottom="10dip"
+
+                    android:paddingTop="10dip" >
+
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dip"
+
+                        android:layout_marginTop="3dip"
+
+                        android:layout_weight="1"
+
+                        android:text="流量条提醒" />
+
+
+
+                    <ImageView
+
+                        android:id="@+id/imgviewbtn"
+
+                        android:layout_width="52dp"
+
+                        android:layout_height="21dp"
+
+                        android:layout_marginRight="20dip"
+
+                        android:src="@drawable/on" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="1dip"
+
+                    android:background="#eeeeee" >
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:background="@android:drawable/list_selector_background"
+
+                    android:paddingBottom="10dip"
+
+                    android:paddingTop="10dip" >
+
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dip"
+
+                        android:layout_marginTop="3dip"
+
+                        android:layout_weight="1"
+
+                        android:text="超额预警" />
+
+
+
+                    <ImageView
+
+                        android:id="@+id/tooltipbtn"
+
+                        android:layout_width="52dp"
+
+                        android:layout_height="21dp"
+
+                        android:layout_marginRight="20dip"
+
+                        android:src="@drawable/on" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="1dip"
+
+                    android:background="#eeeeee" >
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:id="@+id/alarmlinear"
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:background="@android:drawable/list_selector_background"
+
+                    android:paddingBottom="10dip"
+
+                    android:paddingTop="10dip" >
+
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dip"
+
+                        android:layout_marginTop="3dip"
+
+                        android:layout_weight="1"
+
+                        android:text="月剩余流量预警" />
+
+
+
+                    <TextView
+
+                        android:id="@+id/alarmnumtxt"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginRight="20dip"
+
+                        android:text="未设置" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="1dip"
+
+                    android:background="#eeeeee" >
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:background="#EBF1DE" >
+
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="5dp"
+
+                        android:layout_marginLeft="15dp"
+
+                        android:layout_marginTop="5dp"
+
+                        android:text="对讲基础套餐1" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="1dip"
+
+                    android:background="#eeeeee" >
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:background="@android:drawable/list_selector_background"
+
+                    android:paddingBottom="10dip"
+
+                    android:paddingTop="10dip" >
+
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dip"
+
+                        android:layout_marginTop="3dip"
+
+                        android:layout_weight="1"
+
+                        android:text="每月结算日" />
+
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginRight="20dip"
+
+                        android:layout_marginTop="5dip"
+
+                        android:text="1日" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="1dip"
+
+                    android:background="#eeeeee" >
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:background="@android:drawable/list_selector_background"
+
+                    android:paddingBottom="10dip"
+
+                    android:paddingTop="10dip" >
+
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dip"
+
+                        android:layout_marginTop="3dip"
+
+                        android:layout_weight="1"
+
+                        android:text="套餐月流量" />
+
+
+
+                    <TextView
+
+                        android:id="@+id/ptttotal"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginRight="20dip"
+
+                        android:layout_marginTop="5dip"
+
+                        android:text="" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="1dip"
+
+                    android:background="#eeeeee" >
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:background="@android:drawable/list_selector_background"
+
+                    android:paddingBottom="10dip"
+
+                    android:paddingTop="10dip" >
+
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dip"
+
+                        android:layout_marginTop="3dip"
+
+                        android:layout_weight="1"
+
+                        android:text="当月套餐剩余" />
+
+
+
+                    <TextView
+
+                        android:id="@+id/pttlast"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginRight="20dip"
+
+                        android:layout_marginTop="5dip"
+
+                        android:text="" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="1dip"
+
+                    android:background="#eeeeee" >
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:id="@+id/videolinear"
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical" >
+
+
+
+                    <LinearLayout
+
+                        android:layout_width="fill_parent"
+
+                        android:layout_height="wrap_content"
+
+                        android:background="#EBF1DE" >
+
+
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginBottom="5dp"
+
+                            android:layout_marginLeft="15dp"
+
+                            android:layout_marginTop="5dp"
+
+                            android:text="视频套餐" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+
+                        android:layout_width="fill_parent"
+
+                        android:layout_height="wrap_content"
+
+                        android:background="@android:drawable/list_selector_background"
+
+                        android:paddingBottom="10dip"
+
+                        android:paddingTop="10dip" >
+
+
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="10dip"
+
+                            android:layout_marginTop="3dip"
+
+                            android:layout_weight="1"
+
+                            android:text="每月结算日" />
+
+
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginRight="20dip"
+
+                            android:layout_marginTop="5dip"
+
+                            android:text="1日" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+
+                        android:layout_width="fill_parent"
+
+                        android:layout_height="1dip"
+
+                        android:background="#eeeeee" >
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+
+                        android:layout_width="fill_parent"
+
+                        android:layout_height="wrap_content"
+
+                        android:background="@android:drawable/list_selector_background"
+
+                        android:paddingBottom="10dip"
+
+                        android:paddingTop="10dip" >
+
+
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="10dip"
+
+                            android:layout_marginTop="3dip"
+
+                            android:layout_weight="1"
+
+                            android:text="套餐月流量" />
+
+
+
+                        <TextView
+
+                            android:id="@+id/videototal"
+
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginRight="20dip"
+
+                            android:layout_marginTop="5dip" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+
+                        android:layout_width="fill_parent"
+
+                        android:layout_height="1dip"
+
+                        android:background="#eeeeee" >
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+
+                        android:layout_width="fill_parent"
+
+                        android:layout_height="wrap_content"
+
+                        android:background="@android:drawable/list_selector_background"
+
+                        android:paddingBottom="10dip"
+
+                        android:paddingTop="10dip" >
+
+
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="10dip"
+
+                            android:layout_marginTop="3dip"
+
+                            android:layout_weight="1"
+
+                            android:text="当月套餐剩余流量" />
+
+
+
+                        <TextView
+
+                            android:id="@+id/videolast"
+
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginRight="20dip"
+
+                            android:layout_marginTop="5dip" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

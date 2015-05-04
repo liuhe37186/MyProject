@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_splash_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_480" >
+	<!-- GQT英文版，更新欢迎界面 -->
+	<!-- 
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_splash_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_marginBottom="220dip"
+            android:textColor="#ff0000"
+            android:textSize="45sp" />
+
+        <ImageButton
+            android:id="@+id/splash_about_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="220dip"
+            android:layout_marginRight="50dip"
+            android:background="@drawable/about_splash"
+            />
+    </LinearLayout>
+	<RelativeLayout android:layout_width="fill_parent"
+	    android:layout_height="260dip"
+	    android:background="@drawable/about"
+	    android:id="@+id/splash_about"
+	    android:visibility="gone"
+	    android:orientation="horizontal"
+	    >
+        <Button android:background="@android:color/transparent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            />
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="15dip"
+            android:layout_marginLeft="10dip"
+            android:orientation="vertical"
+            >
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/versionshow"
+                android:text="@string/app_version"
+                android:textColor="#000000"
+                android:textSize="12.5dip"
+                />
+        </LinearLayout>
+	</RelativeLayout> -->
+</RelativeLayout>

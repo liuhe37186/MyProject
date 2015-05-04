@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            
+            android:orientation="horizontal"
+            android:paddingBottom="3dip"
+            android:paddingTop="3dip" 
+            android:gravity="center_vertical">
+
+            <!-- android:padding="8dip" 
+            android:background="@drawable/backround_blue_light"-->
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="3dip"
+                android:background="@android:color/white"
+                android:src="@drawable/person_icon" />
+
+            <LinearLayout
+                android:layout_width="180dip"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" 
+                android:layout_marginLeft="10dip">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="阿俊"
+                    android:textColor="#FF000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dip" />
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="1012"
+                    android:textColor="#FF000000"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dip" />
+            </LinearLayout>
+            <CheckBox android:id="@+id/custom_checkbox"
+                
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_marginLeft="10dip"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

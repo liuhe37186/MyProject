@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF" >
+
+    <!-- 第一行 -->
+
+    <ImageView
+        android:id="@+id/imgLeftDot"
+        android:layout_width="10dip"
+        android:layout_height="10dip"
+        android:layout_marginLeft="7dip"
+        android:layout_marginTop="3dip"
+        android:src="@drawable/dot" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@id/imgLeftDot"
+        android:text="2011-0614 04:4:56"
+        android:textSize="13sp" />
+
+    <!-- 第二行 -->
+
+    <TextView
+        android:id="@+id/txtMsgContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLeftDot"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/list_item_receive_message"
+        android:gravity="center_vertical"
+        android:text="1111111111111"
+        android:textSize="15sp" />
+
+</RelativeLayout>

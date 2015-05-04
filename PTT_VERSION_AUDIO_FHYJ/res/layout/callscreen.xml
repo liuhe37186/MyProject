@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical" 
+    android:background="#999999">
+    <!-- 2014-9-15 修改视频单户来电界面 -->
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <FrameLayout 
+       android:id="@+id/callOut"
+       android:visibility="gone"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       >
+       <ImageView 
+           android:id="@+id/image1"
+           android:layout_width="220dp"
+           android:layout_height="220dp"
+           android:layout_gravity="center"
+           android:scaleType="centerInside"
+           android:src="@drawable/calling_normal1"/>
+       <ImageView 
+           android:id="@+id/image2"
+           android:layout_width="170dp"
+           android:layout_height="170dp"
+           android:scaleType="centerInside"
+           android:layout_gravity="center"
+           android:src="@drawable/calling_normal2"/>
+       <ImageView 
+           android:id="@+id/image3"
+           android:layout_width="120dp"
+           android:layout_height="120dp"
+           android:scaleType="centerInside"
+           android:layout_gravity="center"
+           android:src="@drawable/calling_normal3"/>
+   </FrameLayout>
+      <LinearLayout 
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:orientation="vertical">
+
+    <!-- 显示区 -->
+
+    <FrameLayout
+        android:id="@+id/photoUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="#999999" >
+
+        <!-- 头像部分 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="clip_vertical"
+            android:gravity="bottom" >
+
+            <ImageView
+                android:id="@+id/user_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+
+      
+    </FrameLayout>
+
+    <!-- 控制区 -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 呼出操作 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <!-- 挂断控件 -->
+
+            <LinearLayout
+                android:id="@+id/line_outcall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <!-- add by wlei 2014-9-29 -->
+                <FrameLayout 
+				   android:layout_width="match_parent"
+				   android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/out_end_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/loginoutstyle"
+                    android:gravity="center"
+                    android:paddingBottom="15dip"
+                    android:paddingTop="15dip"
+                    android:src="@drawable/ic_end_call" />
+                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|bottom"
+                    android:text="@string/decline"
+                    android:textColor="#ffffff" />
+                 </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line_incall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#990000" >
+						<!--  
+                    <ImageView
+                        android:id="@+id/end_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_end_call" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/end_call"
+                        android:layout_centerHorizontal="true"
+                      
+                        android:text="挂    断"
+                        android:textColor="#ffffff" />
+                        -->
+                        <FrameLayout 
+						    android:layout_width="match_parent"
+						    android:layout_height="wrap_content">
+						    <ImageView
+                            android:id="@+id/end_call"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                         
+                            android:layout_gravity="center"
+                            android:background="@drawable/loginoutstyle"
+                            android:gravity="center"
+                            android:paddingBottom="15dip"
+                            android:paddingTop="15dip"
+                            android:src="@drawable/ic_end_call" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal|bottom"
+                            android:text="@string/decline"
+                            android:textColor="#ffffff" />
+						</FrameLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#5e5e5e" >
+					<!-- 
+                    <ImageView
+                        android:id="@+id/accept_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/u2038_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/accept_call"
+                        android:layout_centerHorizontal="true"
+                        android:text="接    听"
+                        android:textColor="#ffffff" />
+                         -->
+                         <FrameLayout 
+						    android:layout_width="match_parent"
+						    android:layout_height="wrap_content">
+						    <ImageView
+                            android:id="@+id/accept_call"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                           
+                            android:layout_gravity="center"
+                            android:background="@drawable/call_end_call_view_background"
+                            android:gravity="center"
+                            android:paddingBottom="15dip"
+                            android:paddingTop="15dip"
+                            android:src="@drawable/ic_camera_call" />
+						     <!-- android:layout_centerInParent="true" -->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal|bottom"
+                            android:text="@string/accept"
+                            android:textColor="#ffffff" />
+						</FrameLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <!-- 2014-9-15 修改视频单户来电界面 -->
+  </LinearLayout>
+    <!-- 通话信息与连接状态 android:background="#99999999" -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="vertical"
+            >
+
+            <!-- 电话信息 与 通话时间 android:background="#FF000000" -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" 
+                android:background="#ff000000">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" 
+                    >
+
+                    <!-- 用户名 -->
+
+                    <TextView
+                        android:id="@+id/callname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom|left"
+                        android:maxWidth="25dip"
+                        android:paddingLeft="20dip"
+                        android:singleLine="true"
+                        android:textColor="#ffffffff"
+                        android:textSize="20dip" />
+
+                    <!-- 电话号码 -->
+
+                    <TextView
+                        android:id="@+id/callnum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="top|left"
+                        android:maxWidth="25dip"
+                        android:paddingLeft="20dip"
+                        android:singleLine="true"
+                        android:textColor="#ffffffff"
+                        android:textSize="20dip" />
+                </LinearLayout>
+                <!-- 通话时间 : -->
+
+                <Chronometer
+                    android:id="@+id/elapsedTime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:layout_weight="2"
+                    android:gravity="center|right"
+                    android:paddingRight="20dip"
+                    android:textColor="#ffffffff"
+                    android:textSize="20dip" />
+            </LinearLayout>
+            <!-- 连接状态android:background="@color/holo_blue_light" -->
+
+            <TextView
+                android:id="@+id/calltip"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@color/holo_blue_light"
+                android:textColor="#ffffffff"
+                android:textSize="28sp" />
+        </LinearLayout>
+          <!-- 黑屏 -->
+
+        <View
+            android:id="@+id/screen_off_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#FF000000"
+            android:visibility="gone" />
+ </FrameLayout>
+</LinearLayout>

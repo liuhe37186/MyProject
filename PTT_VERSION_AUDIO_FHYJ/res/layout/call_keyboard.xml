@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="#000000"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_marginTop="5dip"
+        android:orientation="horizontal"
+        android:paddingLeft="5dip"
+        android:paddingRight="10dip" >
+
+        <EditText
+            android:id="@+id/p_digits"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:background="@drawable/edittext_bg"
+            android:clickable="true"
+            android:completionHint="@string/to"
+            android:ems="10"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10dp"
+            android:hint="@string/enter_number"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:textSize="25sp"
+            android:typeface="monospace" />
+        <!-- #A7A8AC -->
+
+        <ImageButton
+            android:id="@+id/pdel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/ic_dial_action_delete_file" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/pone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/dial_num_1" />
+
+            <ImageButton
+                android:id="@+id/ptwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/dial_num_2" />
+
+            <ImageButton
+                android:id="@+id/pthree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/dial_num_3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/pfour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/dial_num_4" />
+
+            <ImageButton
+                android:id="@+id/pfive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/dial_num_5" />
+
+            <ImageButton
+                android:id="@+id/psix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/dial_num_6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/pseven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/dial_num_7" />
+
+            <ImageButton
+                android:id="@+id/penight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/dial_num_8" />
+
+            <ImageButton
+                android:id="@+id/pnine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/dial_num_9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/pmi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/dial_num_star" />
+
+            <ImageButton
+                android:id="@+id/p0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/dial_num_0" />
+
+            <ImageButton
+                android:id="@+id/pjing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/dial_num_pound" />
+        </LinearLayout>
+
+         <LinearLayout android:id="@+id/yincang"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+             <ImageButton
+                 android:id="@+id/pphone"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:background="@drawable/keyboard_dial_voicefile" />
+
+            <ImageButton 
+                android:id="@+id/video_call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_dial_videofile"
+                />
+
+            <ImageButton
+                android:id="@+id/num_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/ic_add_contact_file"
+                 />
+        </LinearLayout> 
+    </LinearLayout>
+    <!--
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dip" />
+    -->
+
+</LinearLayout>

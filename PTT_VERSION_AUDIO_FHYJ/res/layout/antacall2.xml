@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:panel="http://schemas.android.com/apk/res/com.zed3.sipua"
+    android:id="@+id/groupcall_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF" >
+
+    <!-- android:paddingTop="2dip" -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:layout_gravity="center_vertical"
+                android:background="@color/holo_blue_light"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="选择联系人"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dip" />
+
+                <TextView
+                    android:id="@+id/confirm_select"
+                    android:layout_width="50dip"
+                    android:layout_height="35dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/background_sytle2"
+                    android:gravity="center"
+                    android:text="完成"
+                    android:textSize="20px" />
+
+                <TextView
+                    android:id="@+id/confirm_select2"
+                    android:layout_width="50dip"
+                    android:layout_height="35dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:background="@drawable/background_sytle2"
+                    android:gravity="center"
+                    android:text="信息"
+                    android:textSize="20px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/custom_title"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="#d6d7db"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/new_group_name_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="8.0dip"
+                    android:layout_marginRight="8.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/conference2"
+                    android:textColor="@color/font_color3"
+                    android:textSize="20.0dip" />
+
+                <LinearLayout
+                    android:id="@+id/mettingline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/font_color3" >
+
+                    <TextView
+                        android:id="@+id/complete_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dip"
+                        android:background="@color/whole_bg"
+                        android:gravity="center"
+                        android:paddingLeft="15dip"
+                        android:paddingRight="15dip"
+                        android:text="@string/start_conference"
+                        android:textColor="@color/font_color3"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/complete_bt"
+                    android:layout_width="35dip"
+                    android:layout_height="35dip"
+                    android:layout_marginRight="8dip"
+                    android:background="@drawable/complete_bt"
+                    android:visibility="gone" />
+
+
+
+                <TextView
+                    android:id="@+id/cancel_select_tv"
+                    android:layout_width="85dip"
+                    android:layout_height="35dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/background_sytle2"
+                    android:gravity="center"
+                    android:paddingLeft="8dip"
+                    android:text="@string/cancel"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+                <LinearLayout
+                    android:id="@+id/cancel_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/font_color3" >
+                    <TextView
+                        android:id="@+id/cancel_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dip"
+                        android:background="@color/whole_bg"
+                        android:gravity="center"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="5dip"
+                        android:text="@string/cancel"
+                        android:textColor="@color/font_color3"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/custom_title" >
+
+                <!--
+                <ListView
+		            android:id="@+id/create_custom_list"
+		            android:layout_width="wrap_content"
+		            android:layout_height="match_parent"
+		            android:layout_above="@id/custom_scrollview"
+		            android:layout_alignParentTop="true" 
+		            android:clickable="true">
+		        </ListView>
+                -->
+
+                <RelativeLayout
+                    android:id="@+id/select_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dip"
+                    android:background="@color/font_color"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="被选中人员"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/confirm_select"
+                        android:layout_width="50dip"
+                        android:layout_height="25dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/confirm_select2"
+                        android:background="@drawable/background_sytle2"
+                        android:gravity="center"
+                        android:text="反选"
+                        android:textSize="15sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/confirm_select2"
+                        android:layout_width="50dip"
+                        android:layout_height="25dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/background_sytle2"
+                        android:gravity="center"
+                        android:text="全选"
+                        android:textSize="15sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+                <!-- android:background="@color/font_color2" -->
+
+                <HorizontalScrollView
+                    android:id="@+id/custom_scrollview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="95dip"
+                    android:layout_below="@+id/custom_title"
+                    android:background="@color/font_color"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <GridView
+                            android:id="@+id/grid_selected_member"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnWidth="55dip"
+                            android:gravity="center_vertical"
+                            android:horizontalSpacing="3dip"
+                            android:numColumns="auto_fit"
+                            android:scrollbars="none"
+                            android:verticalSpacing="1dip" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/custom_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dip"
+                    android:layout_below="@id/custom_scrollview"
+                    android:background="@color/font_color"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="全体联系人"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/invert_select"
+                        android:layout_width="50dip"
+                        android:layout_height="25dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/complete_select"
+                        android:background="@drawable/background_sytle2"
+                        android:gravity="center"
+                        android:text="反选"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/complete_select"
+                        android:layout_width="50dip"
+                        android:layout_height="25dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/background_sytle2"
+                        android:gravity="center"
+                        android:text="全选"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+                <!-- android:background="@color/font_color3" -->
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/custom_line" >
+
+                    <!-- android:background="@drawable/edit_background" -->
+
+                    <ExpandableListView
+                        android:id="@+id/create_custom_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@id/custom_line"
+                        android:cacheColorHint="#00000000"
+                        android:divider="#e3e6eb"
+                        android:dividerHeight="1dip"
+                        android:scrollbars="none"
+                        android:visibility="gone" />
+
+                    <ListView
+                        android:id="@+id/contact_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:cacheColorHint="#eeeeee"
+                        android:divider="#e3e6eb"
+                        android:dividerHeight="1dip" >
+                    </ListView>
+                </FrameLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</FrameLayout>

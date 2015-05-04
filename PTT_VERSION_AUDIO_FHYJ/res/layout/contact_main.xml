@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@drawable/camera_tbg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="66dip"
+            android:layout_height="36dip"
+            android:layout_marginLeft="3dip"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/group_name_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginRight="8.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/contact"
+            android:textColor="@color/white"
+            android:textSize="20.0dip" />
+
+        <ImageButton
+            android:layout_width="66dip"
+            android:layout_height="36dip"
+             />
+
+        <ImageButton
+            android:id="@+id/set_button"
+            android:layout_width="66dip"
+            android:layout_height="36dip"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/whole_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:layout_centerInParent="true"
+            android:text="@string/contact"
+            android:textColor="@color/font_color3"
+            android:textSize="20.0dip" />
+
+        
+        <LinearLayout android:layout_width="wrap_content"
+            android:id="@+id/addcontact"
+            android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/font_color3"
+            >
+            <ImageView android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:id="@+id/t_add"
+                android:paddingRight="15dip"
+                android:paddingLeft="15dip"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:src="@drawable/add_contact_before"
+                android:background="@color/whole_bg"
+                />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/font_color3"
+            android:id="@+id/importcontact"
+            >
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:id="@+id/t_import"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:textColor="@color/font_color3"
+                android:text="@string/import_group_members"
+                android:background="@color/whole_bg"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/shape_contact_search_bg">
+            <SearchView
+		        android:id="@+id/search_view"
+		        android:layout_width="0px"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1"
+		        android:iconifiedByDefault="false"
+		        android:inputType="textFilter"
+		        android:queryHint="@string/search" >
+		    </SearchView>
+        </LinearLayout>
+
+		<ListView
+            android:id="@+id/contact"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:cacheColorHint="#00000000"
+            android:divider="#e3e6eb"
+            android:dividerHeight="1dip" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

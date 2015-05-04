@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView android:id="@+id/aa_list_item_groupname"
+        android:layout_width="18dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="中关村一组"
+        android:textSize="13sp"
+        android:ems="1"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:paddingLeft="1dip"
+        android:paddingRight="1dip"
+        android:paddingTop="1dip"
+        android:paddingBottom="1dip"
+        />
+    <ImageView android:id="@+id/dot_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/san_dot"
+        android:visibility="gone"
+        />
+</LinearLayout>

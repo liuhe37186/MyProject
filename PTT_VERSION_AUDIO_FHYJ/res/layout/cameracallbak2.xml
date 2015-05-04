@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    android:orientation="vertical" >
+
+    <!-- 视频界面 -->
+
+    <RelativeLayout
+        android:id="@+id/relvideo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top"
+        android:layout_marginTop="0dip"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <FrameLayout
+            android:id="@+id/showview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" >
+
+            <com.ffmpeg.LivePreview
+                android:id="@+id/bigvideoView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <LinearLayout
+                android:id="@+id/linear_loadprogress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical" >
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminateDrawable="@drawable/progressbar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/obtaining"
+                    android:textColor="#ffffffff"
+                    android:textSize="20.0sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <SurfaceView
+            android:id="@+id/localvideoView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/setbar_bg"
+            android:layout_margin="5dp"
+            android:layout_alignBottom="@+id/showview"
+            android:layout_alignRight="@+id/showview" />
+
+        <!-- top -->
+
+        <LinearLayout
+            android:id="@+id/toplinear"
+            android:layout_width="fill_parent"
+            android:layout_height="35dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/showview"
+            android:background="@drawable/no"
+            android:gravity="center|center_vertical" >
+
+            <TextView
+                android:id="@+id/vcallname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/incall_textConnected"
+                android:textSize="21sp"
+                android:singleLine="true"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/vcallnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/incall_textConnected"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/selecttxt"
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/incall_textConnected"
+                android:layout_marginLeft="5dip"
+                android:textSize="21sp" />
+        </LinearLayout>
+
+        <!-- bottom  半透名#e0000000 -->
+
+        <LinearLayout
+            
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/showview"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/no"
+            android:orientation="vertical"
+            android:gravity="left|center_vertical" >
+
+
+            <LinearLayout
+                android:id="@+id/bottomlinear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/speakerbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/call_speaker_pressed0" />
+
+                <ImageView
+                    android:id="@+id/mutebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/call_unmute0" />
+
+                <ImageView
+                    android:id="@+id/stopvideobtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/call_video_no0" />
+
+                <ImageView
+                    android:id="@+id/closebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dip"
+                    android:src="@drawable/camera_close_style" />
+            </LinearLayout>
+
+          
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+     <LinearLayout
+                android:id="@+id/progressbarlinear"
+                android:layout_marginTop="0dp"
+                android:background="#ffffff"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:text="@string/flow_used" />
+
+                <TextView
+                    android:id="@+id/alarmnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:text="0M" />
+
+                <ProgressBar
+                    android:id="@+id/probar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:layout_height="8dip"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progressblue" />
+            </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/rlMsgTitleBar02"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@color/whole_bg" >
+		<LinearLayout android:layout_width="wrap_content"
+            android:layout_height="52dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/font_color4"
+            android:id="@+id/btn_home_message"
+            android:orientation="horizontal"
+            >
+            <TextView android:background="@drawable/map_back_release"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="5dip"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/left_photo2"
+                />
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/photo_sent_home2"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:paddingRight="15dip"
+                android:textColor="@color/font_color3"
+                android:text="@string/back"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txtMsgName"
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/name"
+            android:singleLine="true"
+            android:textColor="@color/font_color3"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/imbMsgCall2"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:visibility="gone"
+            android:background="@drawable/imb_msg_call_style2" />
+        <!--
+         <ProgressBar android:id="@+id/message_progressbar"
+	        style="?android:attr/progressBarStyleHorizontal"
+	        android:layout_width="100dip"
+	        android:layout_height="15dip"
+	        android:max="100"
+	        android:progress="10"
+	        android:secondaryProgress="10" 
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginBottom="5dip"
+	        android:visibility="gone"
+	        />
+         <TextView android:id="@+id/message_sending"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="发送中..."
+             android:layout_above="@id/message_progressbar"
+             android:layout_centerHorizontal="true"
+             android:visibility="gone"
+             />
+        -->
+
+        <ImageButton
+            android:id="@+id/imbMsgCall"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_alignTop="@+id/imbMsgCall2"
+            android:layout_toLeftOf="@+id/imbMsgCall2"
+            android:layout_marginRight="20dip"
+            android:visibility="gone"
+            android:background="@drawable/imb_msg_call_style" />
+    </RelativeLayout>
+
+    
+
+    <RelativeLayout
+        android:id="@+id/rllMsgBottomBar03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/font_color" >
+		
+        
+        <!--
+             <ImageButton
+            android:id="@+id/imbAddPicture"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dip"
+            android:src="@drawable/jiahao" />
+        -->
+
+        <Button
+            android:id="@+id/btnSendMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:padding="3dp"
+            android:background="@drawable/backround_light_white"
+            android:text="@string/send"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edtInputMsg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="15dip"
+            android:layout_toLeftOf="@id/btnSendMsg"
+            android:background="@drawable/info_bg"
+            android:hint="@string/input_message"
+            android:maxLines="3"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/lsvItemsMsg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rlMsgTitleBar02"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginBottom="3dip"
+        android:layout_above="@id/rllMsgBottomBar03"
+        android:divider="@null"
+        android:stackFromBottom="true" >
+    </ListView>
+    <TextView android:id="@+id/none_message_dialog"
+   	    android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+   	    android:layout_below="@id/rlMsgTitleBar02"
+   	    android:text="@string/no_record"
+   	    android:textColor="@color/font_color3"
+   	    android:textSize="16sp"
+   	    />
+
+</RelativeLayout>

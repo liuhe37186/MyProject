@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/bigline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"              
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/call_history_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dip"
+                    android:layout_marginRight="7dip"
+                    android:src="@drawable/person_icon" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/call_history_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="bob"
+                            android:textColor="#FF000000"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/call_history_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:layout_marginTop="3dp"
+                            android:text="1231231321"
+                            android:textColor="#FF000000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="1012"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="25px"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="50秒"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="15px" />
+
+                        <TextView
+                            android:id="@+id/info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="2013-04-12 10:45:12"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="15px" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                   <!--  <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:gravity="bottom"
+                        android:layout_height="wrap_content" >
+                    -->     
+                        <ImageView
+                            android:id="@+id/call_history_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_call_incoming_holo_dark" />
+
+                     <!--   <TextView
+                            android:id="@+id/call_history_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/font_color"
+                            />
+                     
+                    </LinearLayout>
+ 					--> 
+                    <TextView
+                        android:id="@+id/call_history_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/day_ago"
+                        android:textColor="@color/font_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <ImageView                    
+                    android:id="@+id/call_msg_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/ptt_listitem_msgbtn" />
+                
+			<LinearLayout
+                    android:id="@+id/line_sub2"
+                    android:layout_width="1dip"
+                    android:layout_height="30dip"
+                     android:layout_marginTop="8dp"  
+                    android:background="#999999" />
+                <ImageView                    
+                    android:id="@+id/call_voice_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/ptt_listitem_voicebtn" />
+                
+                <LinearLayout
+                    android:id="@+id/line_sub"
+                    android:layout_width="1dip"
+                    android:layout_height="30dip"
+                     android:layout_marginTop="8dp"  
+                    android:background="#999999" />
+               
+                <ImageView                    
+                    android:id="@+id/call_video_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/camerabtnfile" />
+                
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/rlMsgTitleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        android:background="@color/whole_bg" 
+        android:clickable="true"
+        android:focusable="true">
+
+        <!-- <ImageView
+            android:id="@+id/contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="15dip"
+            android:background="@drawable/backround_light_white"
+            android:src="@drawable/ic_dial_action_search" /> -->
+
+        <!-- <TextView
+            android:id="@+id/txtTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="信  息"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            android:textStyle="bold" /> -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/backround_light_white"
+            android:text="@string/message"
+            android:textColor="@color/font_color3"
+            android:textSize="20dip"
+             />
+        <ImageView
+            android:id="@+id/imbNewMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="15dip"
+            android:background="@drawable/write_message_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginRight="8dip"/>
+         
+    </RelativeLayout>
+	<!--  <LinearLayout android:id="@+id/top_line"
+        android:layout_height="1dip"
+        android:layout_width="fill_parent"
+        android:background="@color/holo_blue_light"
+        android:layout_marginTop="1dip"
+        ></LinearLayout> -->
+    <ListView
+        android:id="@+id/lsvMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/font_color"  
+    	android:dividerHeight="1dip"
+        android:layout_below="@id/rlMsgTitleBar"
+        android:cacheColorHint="#00000000">
+
+        
+    </ListView>
+    <TextView
+        android:id="@+id/none_message"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rlMsgTitleBar"
+        android:gravity="center"
+        android:text="@string/no_conversations"
+   	    android:textColor="@color/font_color3"
+   	    android:textSize="16sp"
+        android:cacheColorHint="#00000000">
+
+        
+    </TextView>
+    
+   
+    <LinearLayout 
+        android:layout_height="1dip"
+        android:layout_width="fill_parent"
+        android:background="@color/font_color"
+        android:layout_below="@id/lsvMessage"
+        
+        ></LinearLayout>
+
+</RelativeLayout>

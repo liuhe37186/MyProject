@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2009 The Sipdroid Open Source Project
+ *
+ * This file is part of Sipdroid (http://www.sipdroid.org)
+ *
+ * Sipdroid is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This source code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this source code; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+////////////////////////////////////////////////////////////////////////////////////
+// Simplified Chinese language file by Vantonio.
+// If there should be any problems please email me
+// at nio.von@gmail.com or report it at http://www.sipdroid.org
+/////////////////////////////////////////////////////////////////////
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- 增 --> 
+    <string name="unProximitySensor">No proximity sensor</string>
+    <string name="switch_failed">Switch failed</string>
+    <string name="videotype">Video coding</string>
+     <string name="no_groups">No group for you</string>
+    <string name="toast_null_name_or_number">Contact name or phone number can\'t for empty!</string>
+     <string name="codecs_move_up">Up</string>
+    <string name="codecs_move_down">Down</string>
+    <string name="settings_pos3">Updating geographical location</string>
+    <string name="settings_pos">Update the geographical position</string>
+     <string name="settings_improve2">Need to charge account</string>
+    <string name="settings_hdvoice">PBXes support hd voice</string>
+    <string name="settings_policy_never">Change system dormancy strategies to keep the Wi-Fi open</string>
+    <string name="settings_policy_default">Reset the Wi-Fi dormancy is set to the default system</string>
+    <string name="notfast_1">No applicable network</string>
+    <string name="gsm_in_call">gsm call incall,call not make voip call</string>
+    <string name="empty">Please enter a SIP address similar to name@domain.com</string>
+    <string name="voicemail">Voicemail：</string>
+    <string name="card_title_dialing">Dialing</string>
+    <string name="card_title_in_progress">In-Call</string>
+    <string name="card_title_incoming_call">Incoming</string>
+    <string name="card_title_call_ended">Call End</string>
+    <string name="card_title_ended_no_codec">Error: audio codec is not compatible</string>
+    <string name="card_title_on_hold">In the to keep</string>
+    <string name="cameracall_pixsupport">not support this pix</string>
+    <string name="cameracall_camerarestart">camera restart</string>
+    <string name="videoencodesdp">video encoding is wrong</string>
+    <string name="cameracall_startfail">camera start fail,try later</string>
+    <string name="with">With  </string>
+    <string name="mute">Mute</string>
+    <string name="hf">HF</string>
+    <string name="myPosition">My Position</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="declineCall">End</string>
+    <string name="vedio_ending">Ending the call</string>
+	<string name="audio_ending">Ending the call</string>
+	<string name="vedio_hold">Hold the vedio</string>
+	<string name="vedio_incom">Vedio incall</string>
+	<string name="vedio_incoming">Vedio incoming</string>
+	<string name="audio_hold">Hold the audio</string>
+	<string name="audio_incom">Audio incall</string>
+	<string name="audio_incoming">Audio incoming</string>
+	<string name="release_ptt_and_try_again">Please realse PTT button before switching Group...</string>
+    <string name="group_notify">You are not in any group</string>
+    <string name="group_notify_2">You are not in any group</string>
+    <string name="summary_list">high priority,equal priority and low priority</string>
+    <string name="port_error">Please enter the correct port number between 1-65535</string>
+    <string name="add">Add</string>
+    <string name="edit">Edit</string>
+    <string name="new_contact">New contact</string>
+    <string name="group_calling">Group call</string>
+    <string name="position_switch">Position switch</string>
+    <string name="au_anomaly">Audio anomaly</string>
+    <string name="au_anomaly_notify_1">Recording failed and unable to talk. Recording device might be used by another process!</string>
+   	<string name="au_anomaly_notify_2">Please restart App or reboot your mobile</string>
+   	<string name="bl_notify_1">Bluetooth voice equipment is disconnected</string>
+   	<string name="bl_notify_2">Need to connect bluetooth,will you do it?</string>
+   	<string name="bl_notify_ok">Connecting now</string>
+   	<string name="status_1">Connecting</string>
+   	<string name="status_2">Connected</string>
+   	<string name="status_3">Disconnecting</string>
+   	<string name="status_4">Disconnected</string>
+   	<string name="blv_notify">Bluetooth voice equipment is disconnect</string>
+   	<string name="dev_nofity_1">The equipment is not bluetooth hand microphone</string>
+   	<string name="dev_nofity_2">Mobile does not support bluetooth</string>
+   	<string name="bl_status_1">Bluetooth is off</string>
+   	<string name="bl_off_notfiy">Bluetooth is off,will you switch it on?</string>
+   	<string name="dis_hm">Disable hand microphone</string>
+   	<string name="open_bl">Switch bluetooth on</string>
+   	<string name="dis_bl_hm">Bluetooth hand microphone disconnected</string>
+   	<string name="keep">Keep</string>
+   	<string name="blueTooth_1">Connected device(</string>
+   	<string name="blueTooth_2"> )does not support bluetooth,will you reset it? Hint: The name of bluetooth handset starts with ZM</string>
+   	<string name="blueTooth_3">Connected device does not support bluetooth,will you reset it? Hint: The name of bluetooth handset starts with ZM</string>
+   	<string name="bl_port_notify">Bluetooth serial port is disconnected</string>
+   	<string name="hm_notify">Handset auto connecting failed multiple times. Possible reason: 1. Device is off; 2. Device is connected to another phone. Please reboot your device and try again.</string>
+    <string name="try_again">Try again</string>
+    <string name="dising_hm">Hand microphone disconnected</string>
+    <string name="dis_notify">Handset disconnected,you cannot control volume and intercom. Will you reconnect it?</string>
+   <string name="reconnect">reconnect</string>
+    <string name="turn_off_bl">Turn off bluetooth</string>	
+    <string name="turn_on_bl">Turn on bluetooth</string>
+    <string name="bl_off_notify">Bluetooth is off,go to settings page turn it on?</string>
+    <string name="bl_off_notify_1">Bluetooth is off</string>
+    <string name="bl_hm_connected">Bluetooth hand microphone connected</string>
+    <string name="spp_failed">SPP connect failed</string>
+    <string name="spp_success">SPP connect successful</string>
+    <string name="spp_dis">SPP disconnect</string>
+    <string name="hm_dis">Hand microphone disconnected</string>
+    <string name="no_notify">Not connected,does not need disconnect</string>
+    <string name="spp_connecting">Connecting SPP</string>
+    <string name="hm_connect_failed">Hand microphone connect failed</string>
+    <string name="mobile_notify">Mobile does not support bluetooth</string>
+    <string name="bl_hm">Bluetooth hand microphone</string>
+    <string name="bl_off_notify_message">Bluetooth is off,go to settings page turn it on?</string>
+    <string name="stop_search">Stop searching</string>
+    <string name="re_search">Re-searching</string>
+    <string name="connect">connect</string>
+    <string name="no_bl_notify">No bluetooth devices found</string>
+    <string name="exist_notify">Quit program will switch  off bluetooth device,exit or back to desktop?</string>
+    <string name="back_desk">Back to desktop</string>
+    <string name="exits">Exit</string>
+    <string name="no_eq_notify">No equipment have been paired</string>
+    <string name="information_1">There are </string>
+    <string name="information_2">bluetooth devices paired,please select one. Please cancel other paired devices if you want auto connect</string>
+    <string name="no_paried">No paired bluetooth device found,please connect a device and try it again</string>
+    <string name="sus_window">Floating window</string>
+    <string name="sis_loginning">GIS is login...</string>
+    <string name="exception_occur">An unexpected error occurred</string>
+    <string name="unavailable_cno">No console number</string>
+    <string name="sending">Sending</string>
+    <string name="ptt_group_request_timeout">Failed to get speaking right</string>
+    <string name="failed">Failed</string>
+    <string name="unread">(Unread)</string>
+     <string name="mms_sendFailed_1"></string>
+    <string name="mms_sendFailed_2">MMS send failed</string>
+    <string name="readed">Readed</string>
+    <string name="up_success">Upload successfully</string>
+    <string name="up_failed">Upload failed</string>
+    <string name="picture_readed">Picture has been read</string>
+    <string name="send_failed">Send failed</string>
+    <string name="broadcast">Broadcast</string>
+    <string name="con_bro">Conference/Broadcast</string>
+    <string name="console">Console</string>
+    <string name="wrong_service_pwd">Wrong service password,please enter it again</string>
+    <string name="the_status_1">Off-line</string>
+    <string name="the_status_2">Listening</string>
+    <string name="the_status_3">Talking</string>
+    <string name="the_status_4">On-line</string>
+    <string name="the_wrong_pwd">Wrong password,plese contact your administrator</string>
+    <string name="key_set">Key setting</string>
+    <string name="key">Key</string>
+    <string name="sd_check">Please check your SD  card storage </string>
+    <string name="sd_check_2">Please check your SD card R/W authority</string>
+    <string name="check_notify">Please check your netowrk connection</string>
+    <string name="ip_wrong">Wrong IP </string>
+    <string name="speaker">Speaker</string>
+    <string name="receiver">Receiver</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="talker">Talker</string>
+    <string name="bl_status">Bluetooth status</string>
+    <string name="bl_status_records">Bluetooth status records</string>
+    <string name="blue_switch">Bluetooth switch</string>
+    <string name="bl_hm_2">Bluetooth /nhand microphone</string>
+    <string name="obtaining">Obtaining video signal </string>
+    <string name="available">Available</string>
+    <string name="used">Used</string>
+    <string name="flow_used">Data traffic used:</string>
+    <string name="video_connection">Video call</string>
+    <string name="video_call">Video call</string>
+    <string name="voice_call">Voice call</string>
+    <string name="voice_connection">Voice connection</string>
+    <string name="start_search">Start to search</string>
+    <string name="close_video">Close video</string>
+    <string name="end_vedio_notify">End this video call?</string>
+    <string name="group_switch_notify">Group switch prompt</string>
+    <string name="recording_notify">Recording failed! 1. Recording device might be used by another process; 2. Please restart program or reboot your mobile.</string>
+    <string name="ptt_requesting">initiating</string>
+    <string name="not_support_video_function">the number you are calling does not have video function</string>
+    
+    
+    <!-- 不确定的 -->
+    <string name="autoRun_dialogTitle">Auto start</string>
+    <string name="autoRun_on">Yes</string>
+    <string name="autoRun_off">No</string>
+  
+    <string name="validate_user_data">User data is lost, software exits</string>
+    
+    
+    <!-- 几个多次使用的 -->
+
+    <string name="ok">OK</string>
+    <string name="ok_switch">OK</string>
+    <string name="ok_know">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancel_switch">Cancel</string>
+    <string name="information">Information</string>
+    <string name="delete">Delete</string>
+    <string name="delete_contact">Delete</string>
+    <string name="delete_log">Delete</string>
+    <string name="delete_ok">Delete</string>
+    <string name="delete_message">Delete</string>
+    <string name="delete_message_one">Delete</string>
+    <string name="delete_all_contact">Delete all</string>
+    <string name="delete_all_log">Delete all</string>
+    <string name="delete_all_ok">Delete all</string>
+    <string name="add_contact">Add contact</string>
+    <string name="name">Name</string>
+    <string name="number">Number</string>
+    <string name="save">Save</string>
+    <string name="back">Back</string>
+    <string name="back_talk">Back</string>
+    <string name="no_record">No conversation</string>
+    <string name="no_record_upload">No record</string>
+    <string name="input_message">Text message...</string>
+    <string name="input_message_text">Text message...</string>
+    <string name="send">Send</string>
+    <string name="send_t">Send to:</string>
+    <string name="audio_calling">Calling...</string>
+    <string name="video_calling">Calling...</string>
+    <string name="number_not_exist">Number does not exist</string>
+    <string name="options">Options</string>
+    <string name="options_one">Options</string>
+    <string name="no_selected">No contact selected</string>
+    <!-- 产品名称 -->
+
+    <string name="app_name">GQTone</string>
+    <string name="app_version">Version</string>
+    <string name="fail_to_telnumber">Failed to retrieve mobile number.</string>
+    <string name="no_simcard">No sim card.</string>
+    <string name="unknown_state">Unknown sim card state.</string>
+    <string name="error_parse">The data of server was parsed incorrectly.</string>
+    <string name="netvork_connecttion_timeout">Network connection timeout</string>
+    <string name="account_not_exist">The account doesn\'t exist. Please contact the administrator.</string>
+    <string name="wrong_password">The password is wrong and login failed.</string>
+    <string name="version_too_low">The software version is low and login failed.</string>
+    <string name="logged_in_another_place">Warning: this account is already logged in another place.</string>
+    <string name="service_unavailable">Login failed. The service is temporarily unavailable.</string>
+
+    <!-- 登陆页 -->
+    <string name="server_ip">Server IP</string>
+    <string name="login">Login</string>
+    <string name="user_name">Username</string>
+    <string name="user_pwd">Password</string>
+    <string name="loginning">Login now...</string>
+    <string name="userName_is_blank">Empty username!</string>
+    <string name="pwd_is_blank">Empty password!</string>
+    <string name="wrong_pwd">Wrong password</string>
+    <string name="network_exception">The network can\'t be connected.</string>
+    <string name="port">Port</string>
+    <string name="port_is_blank">Empty port number!</string>
+    <string name="server_ip_wrong">Invalid Server IP!</string>
+    <string name="userName_not_exist">The username doesn\'t exist.</string>
+    <string name="timeout">Registration timeout. Please check the server IP and port number.</string>
+    <string name="wrong_name_or_pwd">Wrong Username or Password</string>
+
+    <!-- 导航条 -->
+
+    <string name="contact">Contacts</string>
+    <string name="ptt">PTT</string>
+    <string name="call">Call</string>
+    <string name="message">Messages</string>
+    <string name="upload">Upload</string>
+    <string name="conference">Conf</string>
+    <string name="settings">Settings</string>
+
+    <!-- 联系人 -->
+
+    <string name="import_group_members">Import</string>
+    <string name="import_pttGroup_members">Import group members</string>
+    <string name="import_dialog_message">You will import all memebers from PTT groups and save them to contacts.</string>
+    <string name="import_dialog_ok">Import</string>
+    <string name="no_group_memebers">No PTT group member</string>
+    <string name="importing_pttMembers">Importing group memebers</string>
+    <string name="import_success_1">Import</string>
+    <string name="import_success_2">members successfully.</string>
+    <string name="import_success_3">member successfully.</string>
+    <string name="name_is_blank">Please enter a valid name</string>
+    <string name="number_is_blank">Please enter a valid number</string>
+    <string name="edit_contact">Edit</string>
+    <string name="delete_dialog_message">You will delete </string>
+    <string name="delete_dialog_message_1"></string>
+    <string name="change_contact">Edit contact</string>
+    <string name="yes">Yes</string>
+    <string name="is_delete_all_1">There are</string>
+    <string name="is_delete_all_2">There is</string>
+    <string name="is_delete_all_3">members,</string>
+    <string name="is_delete_all_4">member,</string>
+    <string name="is_delete_all_5">delete all members?</string>
+    <string name="is_delete_all_6">delete this member?</string>
+    <string name="deleting">Deleting</string>
+    <string name="contact_alrady_exist">Duplicated contact!</string>
+    <string name="edit_failed">Duplicated contact!</string>
+    <string name="search">Search</string>
+
+    <!-- 对讲 -->
+	
+	<string name="pushTalk">Push to talk</string>
+	<string name="releaseEnd">Release to End</string>
+    <string name="talking_none">Talking(None)</string>
+    <string name="talking_me">Talking(Self)</string>
+    <string name="talking_someOne">Taking: </string>
+    <string name="my_status">My status: </string>
+    <string name="status_none">None</string>
+    <string name="close">Close</string>
+    <string name="idle">Idle</string>
+    <string name="listening">Listening</string>
+    <string name="queueing">Queueing</string>
+    <string name="talking">Talking</string>
+    <string name="error">Unknow error</string>
+    <string name="member_list">Member list</string>
+    <string name="group_switching">Switching group</string>
+    <string name="switch_group">Switch</string>
+    <string name="notify_message_title">Countdown</string>
+    <string name="notify_message_text">is calling,switch to this group?</string>
+    <string name="network_notify">The network can\'t be connected.</string>
+    <string name="bluetooth_notify">No bluetooth support!</string>
+    <string name="disconnect_hm">Disconnect handset</string>
+    <string name="connect_hm">Connect handset</string>
+    <string name="disconnect_hm_notify">You cannot control volume and PTT after disconnect hand microphone,will you do it?</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="opening_re_mode">Opening receiver mode</string>
+    <string name="re_mode_opened">Receiver mode is already on</string>
+    <string name="opening_sp_mode">Opening speaker mode</string>
+    <string name="sp_mode_opened">Speaker mode is already on</string>
+    <string name="opening_bl_mode">Opening bluetooth mode</string>
+    <string name="bl_mode_opened">Bluetooth mode is already on</string>
+    <string name="closing_bl_mode">Closing bluetooth mode</string>
+    <string name="bl_mode_off">Bluetooth mode is already off</string>
+    <string name="connecting_hm">Connecting handset</string>
+    <string name="connecting_failed">Connecting failed</string>
+    <string name="hm_connected">Connected</string>
+    <string name="disconnecting_hm">Disconnecting handset</string>
+    <string name="hm_disconnected">Disconnected</string>
+    <string name="call_notify">You are calling your own number</string>
+    
+
+    <!-- 通话 -->
+
+    <string name="recents">Recents</string>
+    <string name="week_ago"> week_ago</string>
+    <string name="weeks_ago"> weeks_ago</string>
+    <string name="day_ago"> day ago</string>
+    <string name="days_ago"> days ago</string>
+    <string name="hour_ago"> hour ago</string>
+    <string name="hours_ago"> hours ago</string>
+    <string name="minute_ago"> min ago</string>
+    <string name="minutes_ago"> mins ago</string>
+    <string name="second_ago"> sec ago</string>
+    <string name="seconds_ago"> secs ago</string>
+    <string name="enter_number">Enter numbers</string>
+    <string name="delete_call_notify">You will delete this call log</string>
+    <string name="delete_allCall_notify">You will delete all call logs</string>
+    <string name="ve_service_not">Video service is not activated</string>
+    <string name="vc_service_not">Voice service is not activated</string>
+	<string name="vedio_calling_notify">Already make a call</string>
+	<string name="version_unsupported">Unsupported version below 4.1</string>
+    <!-- 短消息 -->
+
+    <string name="delete_all_message">Delete all messages</string>
+    <string name="new_message">New Message</string>
+    <string name="to">To</string>
+    <string name="select_contact">Select a contact</string>
+    <string name="no_conversations">No conversation</string>
+    <string name="invalid_char">Number contains invalid characters</string>
+    <string name="forward">Forward</string>
+
+    <!-- 拍传 -->
+	<string name="inbox">Inbox</string>
+    <string name="outbox">Outbox</string>
+    <string name="view_mms">View MMS</string>
+	<string name="delete_all">Delete all</string>
+    <string name="dispatch_No.">Console No.</string>
+    <string name="write_something">Write something...(Less than 100 characters)</string>
+    <string name="sent_success">Sent successfully!</string>
+    <string name="camera">Camera</string>
+    <string name="select_from_album">From album</string>
+    <string name="sd_notify">Can\'t find SD card.</string>
+    <string name="enter_ds_number">Please enter Console No.</string>
+    <string name="upload_notify_1">Please take a photo or select a local picture</string>
+    <string name="upload_notify_2">Select a picture from album or take a new one</string>
+    <string name="photo_list">Upload record</string>
+    <string name="nothing_write">No description</string>
+    <string name="send_to">Recipient:</string>
+    <string name="photo_receive">Sender:</string>
+    <string name="status_title">Status:</string>
+    <string name="uploading">uploading</string>
+    <string name="uploaded">uploaded</string>
+    <string name="upload_finished">upload success</string>
+    <string name="upload_failed">upload failed</string>
+    <string name="upload_offline_space_full">upload offline space full</string>
+   
+    <string name="photo_transfer_delete_all">Delete all</string>
+	<string name="photo_transfer_delete_all_title">Delete all</string>
+    <string name="photo_transfer_delete_all_message">All message will be delete?Do you want to continue?</string>
+    <string name="photo_transfer_delete_all_ack">Continue</string>
+    
+    <string name="photo_transfer_delete">Delete</string>
+	<string name="photo_transfer_delete_title">Delete</string>
+    <string name="photo_transfer_delete_message">Current message will be delete?Do you want to continue?</string>
+    <string name="photo_transfer_delete_ack">Continue</string>
+    
+    <string name="reupload">Reupload</string>
+    <string name="reupload_title">Reupload</string>
+    <string name="reupload_message">Current photo Will be reupload?Do you want to continue?</string>
+    <string name="reupload_ack">Continue</string>
+
+    <!-- 会议 -->
+	
+	<string name="conference2">Conference</string>
+    <string name="start_conference">Start</string>
+    <string name="begin_conference">Start Conference</string>
+    <string name="start_conference_notify_1"></string>
+    <string name="start_conference_notify_2">members selected,you will start a conference now.</string>
+    <string name="start_conference_notify_3">member selected,you will start a conference now.</string>
+    <string name="start_conference_ok">Start</string>
+    <string name="dialog_ok">Ok</string>
+    <string name="wrong_notify">Select at least one number</string>
+    <string name="conferencing_title">Conferencing</string>
+    <string name="conferenc_host">Host:</string>
+    <string name="host_me">Self</string>
+    <string name="participants_title">Participants</string>
+    <string name="start_time">Start time:</string>
+    <string name="add_member">Add members</string>
+    <string name="inviting">Invite</string>
+    <string name="invit_member_notify_1"></string>
+    <string name="invit_member_notify_2"> members selected,invite to the conference?</string>
+    <string name="invit_member_notify_3"> member selected,invite to the conference?</string>
+    <string name="invite">Invite</string>
+    <string name="select_contact_notify">Member is already in,please choose others.</string>
+    
+    <!-- 设置 -->
+    
+    <string name="auto_start_title">Auto start</string>
+    <string name="advanced_option">Advanced Options</string>
+    <string name="advanced">Advanced</string>
+    <string name="setting_voice_call">Voice call settings</string>
+    <string name="vc_type">Voice call type</string>
+    <string name="vc_type_1">Mobile</string>
+    <string name="vc_type_2">VoIP</string>
+    <string name="setting_ARM">AMR Rate</string>
+    <string name="setting_ARM_title">Select an AMR Rate</string>
+    <string name="setting_PIME">PTIME Parameters</string>
+    <string name="setting_PIME_title">Select a PTIME Parameter</string>
+    <string name="setting_PIME_detection">VAD</string>
+    <string name="setting_detection_1">Disable</string>
+    <string name="setting_detection_2">Enable</string>
+    <string name="setting_vedio_call">Video call settings</string>
+    <string name="carmera_name">Camera</string>
+    <string name="setting_carmar_1">Front</string>
+    <string name="setting_carmar_2">Rear</string>
+    <string name="setting_carmar_resolution">Camera Resolution</string>
+    <string name="setting_carmar_transcod">Transcoding Resolution</string>
+    <string name="setting_intercom_call">PTT incoming call option</string>
+    <string name="setting_intercom_1">High Priority</string>
+    <string name="setting_intercom_2">Equal Priority</string>
+    <string name="setting_intercom_3">Low Priority</string>
+    <string name="setting_intercom_4">Answer</string>
+    <string name="setting_intercom_5">Reject</string>
+    <string name="prompt">Prompt</string>
+    <string name="restore_after_automatic_answer">Back to original group when auto answered PTT group closed</string>
+    <string name="setting_position">Positioning settings</string>
+    <string name="setting_position_hint">Hint: enabling GPS can improve the position accuracy.</string>
+    <string name="setting_position_1">Positioning mode</string>
+    <string name="setting_position_2">Select Positioning mode</string>
+    <string name="setting_position_3">GPS</string>
+    <string name="setting_position_4">Baidu intelligent positioning</string>
+    <string name="setting_position_5">Baidu GPS </string>
+    <string name="setting_position_6">None</string>
+    <string name="setting_position_7">Positioning interval</string>
+    <string name="setting_position_8">Report interval</string>
+    <string name="setting_screen_wakeup">Screen wakeup settings</string>
+    <string name="select_screen_wakeup_period">select screen wakeup period</string>
+    <string name="setting_register">Register interval</string>
+    <string name="setting_register_dialog_title">Register interval(sec.)</string>
+    <string name="setting_register_notify">Register interval must be not less than 60 seconds</string>
+    <string name="second">secs</string>
+    <string name="setting_signalling">Signalling encryption</string>
+    <string	name="encryption_1">Unencrypted</string>
+	<string name="encryption_2">Encrypted</string>
+	<string name="rate_suspension_title">Rate suspension window</string>
+	<string name="rate_suspension_1">Disabled</string>
+	<string name="rate_suspension_2">Enabled</string>
+	<string name="rate_suspension_total">Total:</string>
+	<string name="rate_suspension_video">Video</string>
+	<string name="rate_suspension_voice">Voice</string>
+	<string name="rate_suspension_send">Send:</string>
+	<string name="rate_suspension_receive">Receive:</string>
+	<string name="setting_log">Log switch</string>
+	<string name="setting_update">Check New Version</string>
+	<string name="setting_updating">Checking new version</string>
+	<string name="setting_update_no">Already the latest version</string>
+	<string name="setting_update_title">Version Checking</string>
+	<string name="setting_update_1">New version </string>
+	<string name="setting_update_2">is available. Upgrade now?</string>
+	<string name="update">Update</string>
+	<string name="no_update">Ignore</string>
+	<string name="updating">Updating</string>
+	<string name="setting_about">About</string>
+	<string name="about_version">GQTone Version</string>
+	<string name="setting_out">Logout</string>
+	<string name="setting_monitoring">Data traffic monitoring</string>
+	<string name="monitoring_notify">Have  you activated the data traffic plan?</string>
+	<string name="bl_switch">Bluetooth switch</string>
+	<string name="close_hm">Close hand microphone</string>
+	<string name="close_hm_notify">You cannot control volume and intercom after disconnect handset,will you do it?</string>
+	<string name="select_language">Choose a kind of language</string>
+	 <string name="language_title">Language</string>
+  	<string name="language_d">Auto</string>
+  	<string name="language_c">Chinese</string>
+  	<string name="language_e">English</string>
+  	<string name="videofront">front</string>
+    <string name="videoback">back</string>
+    <string name="cameracall_usepix">Camera Resolution</string>
+    <string name="allow_lost_level">Packet lost level</string>
+    <string name="viewerror">video resolve error!</string>
+     <string name="gpsOnOff_summaryOn">on</string>
+    <string name="gpsOnOff_summaryOff">off</string>
+    <string name="moncamera">Terminal Use Camera</string>
+	<string name="phonevideo_setting">PhoneVideo Setting</string>
+	<string name="iframe">IFrame Interval</string>
+	<string name="frame_rate">Frame Rate</string>
+	<string name="rate">Net Rate</string>
+	<string name="remote_rotate_lable">Remote Rotate</string>
+	<string name="fullscreen_lable">Full Screen</string>
+	<string name="screen_type">Screen Type</string>
+	<string name="rotate">rotate</string>
+	<string name="ver">portrait</string>
+	<string name="hor">landscape</string>
+	<string name="whole_expand">whole expand</string>
+	<string name="proportional_expand">proportinonal</string>
+	<string name="color_correct">Color Correct</string>
+	<string name="aec_switch">AEC SWITCH</string>
+	<string name="video_land_tip">Please cross screen with mobile phone</string>
+	<!-- 通知栏  ， 登陆成功-->
+	
+	<string name="regok">Login successfully!</string>
+	<string name="reg">Loginning</string>
+    <string name="regfailed">Login failed</string>
+	
+	 <!-- 数组 -->
+    <string-array name="contact_longclick_1">
+       	<item>Edit</item>
+        <item>Delete</item>
+        <item>Delete all</item>
+    </string-array>
+    <string-array name="calllist_longclick">
+        <item>Delete </item>
+        <item>Delete all</item>
+    </string-array>
+    <string-array name="languageList">
+        <item >Auto</item>
+        <item >Chinese</item>
+        <item >English</item>
+    </string-array>	
+     <string-array name="screen_wakeup_period_List">
+        <item >do not auto wakeup screen</item>
+        <item >wakeup screen every 5 minutes</item>
+        <item >wakeup screen every 10 minutes</item>
+        <item >wakeup screen every 20 minutes</item>
+        <item >wakeup screen every 30 minutes</item>
+    </string-array>
+    <string name="loading">loading...</string>
+</resources>

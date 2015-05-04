@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="contact_longclick">
+       	<item>编辑联系人</item>
+        <item>删除该联系人</item>
+        <item>删除全部联系人</item>
+    </string-array>
+    <string-array name="calllist_longclick">
+        <item>删除该条通话记录</item>
+        <item>删除所有通话记录</item>
+    </string-array>
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/ddd" />
+
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#999999"
+        android:gravity="center"
+        >
+    	<TextView 
+    	    android:layout_marginTop="5dip"
+    	    android:layout_marginBottom="5dip"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/setting_position_hint"
+    	   
+    	    />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="?android:attr/listDivider"
+        android:paddingTop="3dip" >
+    </LinearLayout>
+    
+    <LinearLayout
+    	android:id="@+id/postion_set"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:background="@android:drawable/list_selector_background"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:text="@string/setting_position_1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/locatemodetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:text="@string/setting_position_4"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/position_set_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:orientation="horizontal"
+        android:background="?android:attr/listDivider"
+        android:paddingTop="3dip" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/postion_settime"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:background="@android:drawable/list_selector_background"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:text="@string/setting_position_7"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/settimetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="?android:attr/listDivider"
+        android:paddingTop="3dip" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/postion_uploadtime"
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:background="@android:drawable/list_selector_background"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:text="@string/setting_position_8"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/uploadtimetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="?android:attr/listDivider"
+        android:paddingTop="3dip" >
+    </LinearLayout>
+
+</LinearLayout>

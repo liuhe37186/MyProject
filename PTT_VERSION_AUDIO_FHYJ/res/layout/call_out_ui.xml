@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:background="#999999"
+    android:orientation="vertical" >
+    <!-- 2014-9-16 修改语音单呼来电界面 -->
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <FrameLayout 
+       android:id="@+id/callOut"
+       android:visibility="gone"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       >
+       <ImageView 
+           android:id="@+id/image1"
+           android:layout_width="220dp"
+           android:layout_height="220dp"
+           android:layout_gravity="center"
+           android:scaleType="centerInside"
+           android:src="@drawable/calling_normal1"/>
+       <ImageView 
+           android:id="@+id/image2"
+           android:layout_width="170dp"
+           android:layout_height="170dp"
+           android:scaleType="centerInside"
+           android:layout_gravity="center"
+           android:src="@drawable/calling_normal2"/>
+       <ImageView 
+           android:id="@+id/image3"
+           android:layout_width="120dp"
+           android:layout_height="120dp"
+           android:scaleType="centerInside"
+           android:layout_gravity="center"
+           android:src="@drawable/calling_normal3"/>
+   </FrameLayout>
+      <LinearLayout 
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:orientation="vertical">
+
+    <!-- 显示区 -->
+
+    <FrameLayout
+        android:id="@+id/photoUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_weight="1.2"
+        android:background="#999999" >
+
+        <!-- 头像部分 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="clip_vertical"
+            android:gravity="bottom" >
+
+            <ImageView
+                android:id="@+id/user_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+       
+
+        <LinearLayout
+            android:id="@+id/keyboard_layout_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="#999999"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp" >
+				<!-- 免提  GQT英文版 2014-8-26 -->
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:id="@+id/loudspeaker_on"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/call_out_bg"
+                        android:padding="10dp"
+                        android:visibility="invisible" >
+
+                        <ImageView
+                            android:id="@+id/sound_speaker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/u2293_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sound_speaker"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/hf"
+                            android:textColor="#78ff66" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/loudspeaker_off"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/call_out_bg"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/sound_speaker_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/u2279_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sound_speaker_1"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/hf" />
+                    </RelativeLayout>
+                </FrameLayout>
+				<!-- 静音  GQT英文版 2014-8-26 -->
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:id="@+id/forbid_sound_out_on"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/call_out_bg"
+                        android:padding="10dp"
+                        android:visibility="invisible" >
+
+                        <ImageView
+                            android:id="@+id/sound_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/u2260_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sound_out"
+                            android:layout_centerHorizontal="true"
+                            android:singleLine="true"
+                            android:textColor="#ff0000"
+                            android:text="@string/mute" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/forbid_sound_out_off"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/call_out_bg"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/sound_out_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/u2260_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sound_out_1"
+                            android:layout_centerHorizontal="true"
+                            android:singleLine="true"
+                            android:text="@string/mute" />
+                    </RelativeLayout>
+                </FrameLayout>
+                <!-- 蓝牙  GQT英文版 2014-8-26 -->
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:id="@+id/bluetooth_on"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/call_out_bg"
+                        android:padding="10dp"
+                        android:visibility="invisible" >
+
+                        <ImageView
+                            android:id="@+id/bluet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/u2289_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/bluet"
+                            android:layout_centerHorizontal="true"
+                            android:singleLine="true"
+                            android:text="@string/bluetooth"
+                            android:textColor="#0099ff" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bluetooth_off"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/call_out_bg"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/bluet_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/u2283_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/bluet_1"
+                            android:layout_centerHorizontal="true"
+                            android:singleLine="true"
+                            android:text="@string/bluetooth" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keyboard_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#999999"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+           <!-- 2014-9-16 deleted by wlei 小屏幕手机，点开键盘的时候，免提、静音、蓝牙图标会同通话时间重合 
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp" >
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:id="@+id/loudspeaker_on"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/call_out_bg"
+                        android:padding="10dp"
+                        android:visibility="invisible" >
+
+                        <ImageView
+                            android:id="@+id/sound_speaker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/u2293_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sound_speaker"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/hf"
+                            android:textColor="#78ff66" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/loudspeaker_off"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/call_out_bg"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/sound_speaker_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/u2279_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sound_speaker_1"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/hf" />
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:id="@+id/forbid_sound_out_on"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/call_out_bg"
+                        android:padding="10dp"
+                        android:visibility="invisible" >
+
+                        <ImageView
+                            android:id="@+id/sound_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/u2260_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sound_out"
+                            android:layout_centerHorizontal="true"
+                            android:singleLine="true"
+                            android:text="@string/mute" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/forbid_sound_out_off"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/call_out_bg"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/sound_out_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/u2260_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sound_out_1"
+                            android:layout_centerHorizontal="true"
+                            android:singleLine="true"
+                            android:text="@string/mute" />
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:id="@+id/bluetooth_on"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/call_out_bg"
+                        android:padding="10dp"
+                        android:visibility="invisible" >
+
+                        <ImageView
+                            android:id="@+id/bluet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/u2289_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/bluet"
+                            android:layout_centerHorizontal="true"
+                            android:singleLine="true"
+                            android:text="@string/bluetooth"
+                            android:textColor="#0099ff" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bluetooth_off"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/call_out_bg"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/bluet_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/u2283_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/bluet_1"
+                            android:layout_centerHorizontal="true"
+                            android:singleLine="true"
+                            android:text="@string/bluetooth" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>-->
+
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                layout="@layout/call_keyboard" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 控制区 -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 呼出操作 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom"
+            android:orientation="vertical" >
+
+            <!-- 挂断控件 -->
+
+
+            <!--
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/end_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/loginoutstyle"
+                    android:gravity="center"
+                    android:paddingBottom="15dip"
+                    android:paddingTop="15dip"
+                    android:src="@drawable/ic_end_call" />
+            </LinearLayout>
+            -->
+            <!-- 静音、扬声器等操作按钮 -->
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/holo_blue_light"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/table_show"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="#BE0A0B" >
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:padding="10dip" >
+
+                            <ImageView
+                                android:id="@+id/keyboard_hide"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"                    
+                                android:clickable="true"
+                                android:paddingBottom="12dip"
+                                android:paddingTop="12dip"
+                                android:src="@drawable/ic_dialpad_holo_dark_hide"
+                                android:visibility="invisible" >
+
+                                <!-- android:src="@drawable/ic_dialpad_holo_dark_hide" android:background="#FFDEDEDE" -->
+                            </ImageView>
+                            <!-- android:background="@drawable/backround_light_white" -->
+
+                            <ImageView
+                                android:id="@+id/keyboard_show"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="true"
+                                android:paddingBottom="12dip"
+                                android:paddingTop="12dip"
+                                android:src="@drawable/ic_dialpad_holo_dark_show" >
+                            </ImageView>
+                            <!-- android:background="@drawable/backround_light_white" -->
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!--
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:visibility="invisible" >
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/backround_light_white"
+                            android:clickable="true"
+                            android:paddingBottom="22dip"
+                            android:paddingTop="22dip"
+                            android:src="@drawable/ic_sound_speakerphone_holo_dark" >
+                        </ImageView>
+                    </LinearLayout>
+                    -->
+
+
+                    <!--
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" >
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:padding="10dip" >
+
+                            <ImageView
+                                android:id="@+id/loudspeaker_on"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#FFDEDEDE"
+                                android:clickable="true"
+                                android:paddingBottom="12dip"
+                                android:paddingTop="12dip"
+                                android:src="@drawable/ic_sound_speakerphone_on_holo_dark"
+                                android:visibility="invisible" >
+                            </ImageView>
+
+                            <ImageView
+                                android:id="@+id/loudspeaker_off"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="true"
+                                android:paddingBottom="12dip"
+                                android:paddingTop="12dip"
+                                android:src="@drawable/ic_sound_speakerphone_on_holo_dark" >
+                            </ImageView>
+                           
+                        </FrameLayout>
+                    </LinearLayout>
+                    -->
+
+
+                    <!--
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:visibility="invisible" >
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/backround_light_white"
+                            android:clickable="true"
+                            android:paddingBottom="22dip"
+                            android:paddingTop="22dip"
+                            android:src="@drawable/ic_sound_speakerphone_holo_dark" >
+                        </ImageView>
+                    </LinearLayout>
+                    -->
+                    <!--
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" >
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:padding="10dip" >
+
+                            <ImageView
+                                android:id="@+id/forbid_sound_out_on"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#FFDEDEDE"
+                                android:clickable="true"
+                                android:paddingBottom="12dip"
+                                android:paddingTop="12dip"
+                                android:src="@drawable/ic_mute_holo_dark"
+                                android:visibility="invisible" >
+                            </ImageView>
+
+                            <ImageView
+                                android:id="@+id/forbid_sound_out_off"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="true"
+                                android:paddingBottom="12dip"
+                                android:paddingTop="12dip"
+                                android:src="@drawable/ic_mute_holo_dark" >
+                            </ImageView>
+                           
+                        </FrameLayout>
+                    </LinearLayout>
+                    -->
+				
+                    <RelativeLayout
+                        android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:background="#000000" >
+                    </RelativeLayout>
+                  
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#BE0A0B" >
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                             >
+
+                            <ImageView
+                                android:id="@+id/end_call2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/loginoutstyle"
+                                android:gravity="center"
+                                android:paddingBottom="15dip"
+                                android:paddingTop="15dip"
+                                android:src="@drawable/ic_end_call" />
+
+                            <TextView
+                                android:id="@+id/end_call2_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal|bottom"
+                                android:paddingBottom="10dip"
+                                android:text="@string/declineCall"
+                                android:textColor="#ffffff" />
+                        </FrameLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- 来电 -->
+
+                <LinearLayout
+                    android:id="@+id/income_control_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#BE0A0B" >
+						<FrameLayout 
+						    android:layout_width="match_parent"
+						    android:layout_height="wrap_content">
+						    <ImageView
+                            android:id="@+id/end_call"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                         
+                            android:layout_gravity="center"
+                            android:background="@drawable/loginoutstyle"
+                            android:gravity="center"
+                            android:paddingBottom="15dip"
+                            android:paddingTop="15dip"
+                            android:src="@drawable/ic_end_call" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal|bottom"
+                            android:text="@string/decline"
+                            android:textColor="#ffffff" />
+						</FrameLayout>
+                        
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#5e5e5e" >
+						<FrameLayout 
+						    android:layout_width="match_parent"
+						    android:layout_height="wrap_content">
+						    <ImageView
+                            android:id="@+id/accept_call"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                           
+                            android:layout_gravity="center"
+                            android:background="@drawable/call_end_call_view_background"
+                            android:gravity="center"
+                            android:paddingBottom="15dip"
+                            android:paddingTop="15dip"
+                            android:src="@drawable/ic_dial_action_call" />
+						     <!-- android:layout_centerInParent="true" -->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal|bottom"
+                            android:text="@string/accept"
+                            android:textColor="#ffffff" />
+						</FrameLayout>
+                        
+                    </RelativeLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <!-- 来电操作 -->
+
+
+        <!-- 操作提示线,按键选中时显示白色下划线     键盘   扬声  静麦  新建 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <View
+                android:id="@+id/line_keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="5dip"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="#FFFFFFFF"
+                android:visibility="invisible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dip"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="#FFFFFFFF"
+                android:visibility="invisible" />
+
+            <View
+                android:id="@+id/line_loudspeaker"
+                android:layout_width="match_parent"
+                android:layout_height="5dip"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="#FFFFFFFF"
+                android:visibility="invisible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dip"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="#FFFFFFFF"
+                android:visibility="invisible" />
+
+            <View
+                android:id="@+id/line_forbid_sound_out"
+                android:layout_width="match_parent"
+                android:layout_height="5dip"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:visibility="invisible" />
+        </LinearLayout>
+        <!-- 黑屏 -->
+
+        <!--<View
+            android:id="@+id/screen_off_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#FF000000"
+            android:visibility="gone" />-->
+    </FrameLayout>
+   </LinearLayout>
+    <!-- 通话信息与连接状态 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#99999999"
+            android:gravity="top"
+            android:orientation="vertical" >
+
+            <!-- 电话信息 与 通话时间 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <!-- 用户名 -->
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="bottom|left"
+                        android:paddingLeft="20dip"
+                        android:singleLine="true"
+                        android:text="张三"
+                        android:textColor="#ffffffff"
+                        android:textSize="20dip" />
+
+                    <!-- 电话号码 -->
+
+                    <TextView
+                        android:id="@+id/user_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="top|left"
+                        android:paddingLeft="20dip"
+                        android:text="18910102020"
+                        android:textColor="#ffffffff"
+                        android:textSize="20dip" />
+                </LinearLayout>
+                <!-- 通话时间 : -->
+
+                <Chronometer
+                    android:id="@+id/call_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:layout_weight="2"
+                    android:gravity="center|right"
+                    android:paddingRight="20dip"
+                    android:textColor="#ffffffff"
+                    android:textSize="20dip" />
+            </LinearLayout>
+            <!-- 连接状态 -->
+
+            <TextView
+                android:id="@+id/connect_state"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/holo_blue_light"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/audio_calling"
+                android:textColor="#ffffffff"
+                android:textSize="28sp" />
+             <TextView
+                    android:id="@+id/call_time2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:textColor="#ffffffff"
+                    android:textSize="50sp" />
+        </LinearLayout>
+        <!-- 黑屏 -->
+
+        <View
+            android:id="@+id/screen_off_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#FF000000"
+            android:visibility="gone" />
+  </FrameLayout>
+</LinearLayout>

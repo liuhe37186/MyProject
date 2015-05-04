@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/rlMsgTitleBar02"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@color/whole_bg" >
+		<LinearLayout android:layout_width="wrap_content"
+            android:layout_height="52dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/font_color4"
+            android:id="@+id/btn_home_message"
+            android:orientation="horizontal"
+            >
+            <TextView android:background="@drawable/map_back_release"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="5dip"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/left_photo2"
+                />
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/photo_sent_home2"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:paddingRight="15dip"
+                android:textColor="@color/font_color3"
+                android:text="@string/back"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/contact_title"
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/select_contact"
+            android:textColor="@color/font_color3"
+            android:textSize="15sp" />
+       
+
+        <ImageButton
+            android:id="@+id/imbMsgCall2"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:visibility="gone"
+            android:background="@drawable/imb_msg_call_style2" />
+        <!--
+         <ProgressBar android:id="@+id/message_progressbar"
+	        style="?android:attr/progressBarStyleHorizontal"
+	        android:layout_width="100dip"
+	        android:layout_height="15dip"
+	        android:max="100"
+	        android:progress="10"
+	        android:secondaryProgress="10" 
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginBottom="5dip"
+	        android:visibility="gone"
+	        />
+         <TextView android:id="@+id/message_sending"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="发送中..."
+             android:layout_above="@id/message_progressbar"
+             android:layout_centerHorizontal="true"
+             android:visibility="gone"
+             />
+        -->
+
+        <ImageButton
+            android:id="@+id/imbMsgCall"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_alignTop="@+id/imbMsgCall2"
+            android:layout_toLeftOf="@+id/imbMsgCall2"
+            android:layout_marginRight="20dip"
+            android:visibility="gone"
+            android:background="@drawable/imb_msg_call_style" />
+    </RelativeLayout>
+    <TextView android:id="@+id/contact_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dip"
+	    android:layout_alignParentTop="true"
+	    android:gravity="center"
+	    android:background="@color/whole_bg"
+	    android:text="选择联系人" 
+	    android:textColor="@color/font_color3"
+	    android:textSize="20sp"
+	    android:visibility="gone"/>
+	<!-- <TextView android:id="@+id/contact_confirm"
+	    android:layout_width="match_parent"
+	    android:layout_height="60dip"
+	    android:layout_alignParentBottom="true"
+	    android:gravity="center"
+	    android:background="@color/holo_blue_light"
+	    android:text="确定" 
+	    android:textColor="#FFFFFF"
+	    android:textSize="25sp"
+	    android:visibility="visible"/> -->
+	<ListView android:id="@+id/contact_message"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:divider="@color/font_color"  
+	    android:dividerHeight="1dip"
+	    android:cacheColorHint="#00000000"
+	    android:layout_below="@id/rlMsgTitleBar02"
+	    ></ListView>
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dip"
+	    android:layout_below="@id/contact_message"
+	    android:background="@color/font_color"
+	    ></LinearLayout>
+</RelativeLayout>
+<!--
+    注意事项:   
+    1.这里ViewPager和 PagerTabStrip都要把包名写全了，不然会ClassNotFount  
+    2.API中说：在布局xml把PagerTabStrip当做ViewPager的一个子标签来用，不能拿出来，不然还是会报错  
+    3.在PagerTabStrip标签中可以用属性android:layout_gravity=TOP|BOTTOM来指定title的位置  
+    4.如果要显示出PagerTabStrip某一页的title,需要在ViewPager的adapter中实现getPageTitle(int)
+
+-->

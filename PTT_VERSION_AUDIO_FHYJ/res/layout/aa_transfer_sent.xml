@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_wihte"
+    android:orientation="vertical" >
+    <LinearLayout android:id="@+id/li_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_gravity="top"
+        android:background="@color/whole_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+	<LinearLayout android:layout_width="wrap_content"
+            android:layout_height="52dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/font_color4"
+            android:id="@+id/btn_home_photo"
+            android:orientation="horizontal"
+            >
+            <TextView android:background="@drawable/map_back_release"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="5dip"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/left_photo"
+                />
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/photo_sent_home"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:paddingRight="15dip"
+                android:textColor="@color/font_color3"
+                android:text="@string/back"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/search_edittext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginRight="8.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/outbox"
+            android:textColor="@color/font_color3"
+            android:textSize="20.0dip" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/keyboard_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:src="@drawable/transfer_list_icon_selector" />
+    </LinearLayout>
+    <TextView android:id="@+id/none_photo_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_record_upload"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:textColor="@color/font_color3"
+        />
+    <ListView android:id="@+id/transfer_sent_list"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	 android:cacheColorHint="#00000000"
+        ></ListView>
+    
+
+</LinearLayout>

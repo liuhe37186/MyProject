@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--                
+     * Copyright (C) 2009 The Sipdroid Open Source Project * * This file 
+	is part of Sipdroid (http://www.sipdroid.org) * * Sipdroid is free software; 
+	you can redistribute it and/or modify * it under the terms of the GNU General 
+	Public License as published by * the Free Software Foundation; either version 
+	3 of the License, or * (at your option) any later version. * * This source 
+	code is distributed in the hope that it will be useful, * but WITHOUT ANY 
+	WARRANTY; without even the implied warranty of * MERCHANTABILITY or FITNESS 
+	FOR A PARTICULAR PURPOSE. See the * GNU General Public License for more details. 
+	* * You should have received a copy of the GNU General Public License * along 
+	with this source code; if not, write to the Free Software * Foundation, Inc., 
+	59 Temple Place, Suite 330, Boston, MA 02111-1307 USA ///////////////////////////////////////////////////////////////////// 
+	// these are the main definitions of Sipdroid // for modifying them additional 
+
+	terms according to section 7, GPL apply // see ADDITIONAL_TERMS.txt /////////////////////////////////////////////////////////////////////
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zed3.sipua"
+    android:installLocation="auto"
+    android:versionCode="102080012"
+    android:versionName="1.2.8.12" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <!--           
+        <supports-screens
+        android:anyDensity="false"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+    -->
+
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS" /><!-- add by wlei 2014-9-19 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- MODIFY_AUDIO_SETTINGS add by oumogang 2013-08-22 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+<!-- 4 permission for bluetooth record -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+	<uses-permission android:name="android.permission.BLUETOOTH"/>
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.READ_CONTACTS"/>
+	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <application
+        android:name=".SipUAApp"
+        android:configChanges="orientation|keyboardHidden|locale"
+        android:icon="@drawable/icon64"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:screenOrientation="portrait">
+		<meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="hQzXk2qgLE193GnFd1S5NQi7"/>
+        <activity
+            android:name="com.zed3.sipua.ui.DemoCallScreen"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".ui.Sipdroid"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" />
+        <activity android:name="com.zed3.sipua.ui.SdkCheckerActivity" >
+        </activity>
+        <activity
+            android:name="com.zed3.sipua.ui.MainTabActivity"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        -->
+        <!-- android:theme="@android:style/Holo.Light.ButtonBar" -->
+        <activity
+            android:name=".ui.GroupCall"
+            android:launchMode="singleTask"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity 
+            android:name=".ui.splash.UnionLogin"
+             android:launchMode="singleTask"
+             android:configChanges="locale"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity 
+            android:name=".ui.MainDirectoryActivity"
+             android:launchMode="singleTask"
+             android:configChanges="locale"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity
+            android:name="com.zed3.sipua.message.MessageMainActivity"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:screenOrientation="portrait" />
+        
+         <activity
+            android:name="com.zed3.sipua.message.PhotoTransferActivity"
+            android:configChanges="orientation|keyboardHidden|locale"
+             android:windowSoftInputMode = "adjustPan"
+             android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zed3.sipua.message.PhotoTransferSentActivity"
+            android:configChanges="orientation|keyboardHidden|locale"
+             android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zed3.sipua.ui.GrpCallSwitch"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.zed3.sipua.ui.GrpCallNotify"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Dialog" />
+         <activity
+            android:name="com.zed3.flow.FlowAlarmSet"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <activity
+            android:name="com.zed3.sipua.ui.MessageHistory"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.zed3.sipua.ui.PrtCallContacts"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.zed3.sipua.welcome.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity
+            android:name="com.zed3.audio.CustomDialog"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        
+        <activity
+            android:name="com.zed3.sipua.ui.PrtCallHistory"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:configChanges="locale" />
+        <activity
+            android:name="com.zed3.sipua.ui.PrtCallTab"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:launchMode="singleTask" />
+        <activity android:name="com.zed3.sipua.ui.BookListTab" 
+            android:configChanges="locale"/>
+        <activity android:name="com.zed3.sipua.ui.PrtCallNewContact" 
+            android:configChanges="locale"/>
+        <activity android:name="com.zed3.sipua.ui.PrtCallModifyContact"
+            android:configChanges="locale" />
+        <activity
+            android:name="com.zed3.sipua.ui.ActvityNotify"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.zed3.sipua.ui.GroupStateList"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:launchMode="singleTask" />
+        <!-- <activity
+            android:name="com.zed3.sipua.ui.PSTN"
+            android:icon="@drawable/ic_launcher_phone"
+            android:label="@string/pstn_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+            </intent-filter>
+        </activity> -->
+        <activity
+            android:name="com.zed3.sipua.ui.SIP"
+            android:label="@string/app_name" 
+            android:configChanges="locale">
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zed3.sipua.ui.MainActivity"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:screenOrientation="portrait"
+             android:windowSoftInputMode="adjustPan"
+             android:configChanges="orientation|keyboardHidden|locale"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.zed3.sipua.ui.AutoAnswer"
+            android:label="@string/app_name"
+            android:configChanges="locale" />
+        <activity
+            android:name="com.zed3.sipua.ui.ChangeAccount"
+            android:label="@string/app_name" 
+            android:configChanges="locale"/>
+        <activity
+            android:name="com.zed3.sipua.ui.SIPUri"
+            android:label="@string/app_name"
+            android:configChanges="locale"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.CALL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sip" />
+                <data android:scheme="sipdroid" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="imto" />
+                <data android:scheme="sip" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_PRIVILEGED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sip" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zed3.sipua.ui.SettingVideoSize"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:label="@string/phonevideo_setting"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+         <activity
+            android:name="com.zed3.flow.TotalFlowView"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:launchMode="singleTask">
+        </activity>
+         
+        <activity
+            android:name="com.zed3.sipua.ui.Activity2"
+            android:label="@string/app_name"
+            android:configChanges="locale"
+            android:taskAffinity="" />
+        <activity
+            android:name="com.zed3.sipua.ui.Settings"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:label="@string/app_name"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zed3.sipua.ui.SettingNew"
+             android:launchMode="singleTask"
+             android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        
+        <activity
+            android:name="com.zed3.codecs.Codecs$CodecSettings"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:configChanges="locale"
+            android:theme="@android:style/Theme.Light" >
+        </activity>
+        <activity
+            android:name="com.zed3.sipua.ui.VideoCamera"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:label="@string/menu_video"
+            android:screenOrientation="landscape"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+         <receiver android:name="com.zed3.sipua.message.SmsMmsReceiver"
+			android:enabled="true">
+			<intent-filter>
+				<action android:name="com.zed3.sipua.sms_receive" />
+				<action android:name="com.zed3.sipua.group_num_type" />
+				<action android:name="com.zed3.sipua.delivery_report" />
+				<action android:name="com.zed3.sipua.send_message_ok" />
+				<action android:name="com.zed3.sipua.mms_receive" />
+				<action android:name="com.zed3.sipua.send_message_fail" />
+				<action android:name="android.intent.action.NUMBER_KEY_PRESSED" />
+				<action android:name="android.intent.action.LTE_EMERGENCY_CALL" />
+				<action android:name="com.zed3.sipua.development_interface" />
+				<action android:name="com.zed3.sipua.mms_offline_space_full" />
+			</intent-filter>
+		</receiver>
+        <activity
+            android:name="com.zed3.sipua.ui.InCallScreen"
+            android:label="@string/app_name"
+            android:configChanges="locale"
+            android:launchMode="singleInstance"
+            android:taskAffinity="" >
+        </activity>
+        <activity
+            android:name=".ui.CameraCall"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:launchMode="singleTask">
+        </activity>
+		<receiver android:name="com.zed3.zhejiang.ZhejiangReceivier" >
+            <intent-filter>
+                <action android:name="com.zed3.sipua.login_gqt" />
+                <action android:name="com.zed3.sipua.logout" />
+                <action android:name="com.zed3.sipua.call" />
+                <action android:name="com.zed3.sipua.group_get" />
+                <action android:name="com.zed3.sipua.group_change" />
+                <action android:name="com.zed3.sipua.group_status_get" />
+                <action android:name="com.zed3.sipua.ptt" />
+                <action android:name="com.zed3.sipua.group_member_get" />
+                <action android:name="com.zed3.sipua.ui_groupcall.group_status" />
+                <action android:name="com.zed3.sipua.setting" />
+                <action android:name="com.zed3.sipua.sms_sent" />
+                <action android:name="SEND_MESSAGE_SUCCEED" />
+                <action android:name="SEND_MESSAGE_FAIL" />
+                <action android:name="TEXT_MESSAGE_CHANGED" />
+                <action android:name="com.zed3.sipua.ui_receive_text_message" />
+                <action android:name="com.zed3.sipua.ui_send_text_message_fail" />
+                <action android:name="com.zed3.sipua.ui_send_text_message_succeed" />
+                <action android:name="com.zed3.sipua.all_get" />
+                
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.zed3.sipua.ui.CameraCallReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.StartDemoCallScreen" />
+                <action android:name="android.intent.action.RestartUnionLogin" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.zed3.utils.RestoreReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.zed3.restore" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.zed3.broadcastptt.PttBroadcastReceiver">
+            <intent-filter >
+                <action android:name="com.earintent.ptt"/>
+            </intent-filter>
+        </receiver>
+        
+        <receiver
+            android:name="com.zed3.utils.DestroyAppReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.zed3.sipua.exitAppbroadcast" />
+            </intent-filter>
+        </receiver>
+        <!-- MediaButtonReceiver add by ouomgang 2013-07-27 -->
+        <receiver
+            android:name="com.zed3.media.mediaButton.MediaButtonReceiver"
+            android:enabled="true"
+            android:process="com.zed3.sipua" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+        <!-- PhoneStatReceiver for ZMBluetooth, add by ouomgang 2014-02-18 
+        <receiver android:name="com.zed3.bluetooth.PhoneStatReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+		-->
+        <receiver android:name="com.zed3.sipua.ui.OneShotAlarm" />
+        <receiver android:name="com.zed3.sipua.ui.MyHeartBeatReceiver" />
+        <receiver android:name="com.zed3.power.ScreenWakeupActionReceiver" />
+        <receiver android:name="com.zed3.sipua.ui.OneShotAlarm2" />
+        <receiver android:name="com.zed3.sipua.ui.LoopAlarm" />
+        <receiver android:name="com.zed3.sipua.ui.OwnWifi" />
+        <receiver android:name="com.zed3.sipua.ui.OneShotLocation" />
+        <receiver android:name="com.zed3.sipua.ui.LoopLocation" />
+         <!-- registerReceiver by code modify by mou 2014-10-10
+        <receiver android:name="com.zed3.sipua.ui.Caller" >
+            <intent-filter android:priority="-1" >
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+         -->
+        <receiver android:name="com.zed3.utils.BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.zed3.sipua.ui.Receiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE" />
+                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data android:scheme="package" />
+                <data android:path="com.zed3.sipua" />
+            </intent-filter>
+            <!-- GQT英文版 2014-8-29 系统语言改变 -->
+            <intent-filter >
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+            <!-- GQT英文版2014-9-2 手动切换语言 -->
+            <intent-filter >
+                <action android:name="SettingLanguage"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.zed3.sipua.ui.RegisterService" />
+
+        <service android:name="com.zed3.video.SensorCheckService"></service>
+         
+        <service android:name=".ui.MicWakeUpService" />
+       
+        <service android:name="com.zed3.flow.FlowRefreshService" >
+            <intent-filter>
+                <action android:name="com.zed3.flow.FlowRefreshService" >
+                </action>
+            </intent-filter>
+        </service>
+        <service android:name="com.zed3.sipua.message.AlarmService" >
+        </service>
+
+        <service android:name="com.zed3.utils.NetworkListenerService"></service>
+        <activity android:name="org.ruiqinwang.playamr.AmrUiActivity"
+            android:configChanges="locale" >
+        </activity>
+        <activity android:name=".ui.panel.PanelActivity" 
+            android:configChanges="locale">
+        </activity>
+        <activity
+            android:name=".ui.CallActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:configChanges="locale"
+            android:theme="@android:style/Animation.Translucent" >
+        </activity>
+        <activity
+            android:name=".ui.CallActivity2"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"
+             >
+        </activity>
+        <activity
+            android:name=".ui.contact.ContactActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|locale"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <receiver android:name=".ui.ExcitReceiver" >
+        </receiver>
+
+        <!-- GroupCallStateReceiver add by oumogang 2014-01-13 
+        <receiver android:name="com.zed3.bluetooth.GroupCallStateReceiver">
+	      <intent-filter>
+                <action android:name="com.zed3.sipua.ui_groupcall.group_status" />
+            </intent-filter>
+		</receiver> 
+        -->
+       
+        <activity
+            android:name=".ui.contact.AddContactDialog"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        
+        <activity
+            android:name="com.zed3.bluetooth.ZMBluetoothControlActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zed3.bluetooth.ZMBluetoothSelectActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.contact.PhoneNumberExistDialog"
+            android:configChanges="locale">
+        </activity>
+        <activity
+            android:name=".ui.contact.DeleteContactDialog"
+            android:configChanges="locale">
+        </activity>
+        <activity
+            android:name=".message.MessageComposeActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".message.MessageDialogueActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|locale"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".ui.lowsdk.MainSipDroid4LowSdk"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.lowsdk.ContactActivity"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.lowsdk.GroupCallActivity"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.lowsdk.TalkBackActivity"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.lowsdk.TalkBackNew"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.lowsdk.TalkBackGisActivity"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".ui.lowsdk.SipdroidActivity"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.lowsdk.MessageActivity"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.lowsdk.TabActivity4LowSdk"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.lowsdk.ContactActivity4LowSdk"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:configChanges="locale"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".message.MessageToContact"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zed3.settings.AboutActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="locale"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zed3.settings.AdvancedChoice"
+            android:screenOrientation="portrait" 
+            android:configChanges="locale"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zed3.settings.AudioSetActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="locale"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.zed3.settings.GroupCallComingSetActivity"
+            android:screenOrientation="portrait" 
+            android:configChanges="locale"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+          <activity
+            android:name="com.zed3.settings.GpsSetActivity"
+            android:screenOrientation="portrait" 
+            android:launchMode="singleTask"
+            android:configChanges="locale"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".ui.dataview.DataViewsActivity"
+            android:configChanges="locale"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".ui.dialog.MyDialog"
+            android:configChanges="locale"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="locale"
+            android:theme="@android:style/Theme.NoDisplay" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:configChanges="locale"
+            android:name=".ui.anta.AntaCallActivity">
+        </activity>
+        <activity 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:name=".ui.anta.AntaCallActivity2">
+        </activity>
+        <activity 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:name=".ui.anta.InviteContactActivity">
+        </activity>
+        <activity
+            android:name=".baiduMap.LocationOverlayDemo"
+            android:configChanges="orientation|keyboardHidden|locale"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.zed3.sipua.message.MmsMessageDetailActivity"
+            android:configChanges="orientation|keyboardHidden|locale"
+             android:windowSoftInputMode = "adjustPan"
+             android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+		<activity
+            android:name="com.zed3.sipua.message.PhotoTransferReceiveActivity"
+            android:configChanges="orientation|keyboardHidden|locale"
+             android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_CONTACTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.FLASHLIGHT" >
+    </uses-permission>
+    <!-- new add -->
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <!-- Add by zzhan 2011-9-8 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />  
+	<uses-permission android:name="android.permission.DEVICE_POWER" />  
+	<!-- add by hu 2013/12/21 -->
+	<permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </permission>
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" >
+    </uses-permission>
+    <!-- <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"></uses-permission> -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    
+	 <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!-- support all screen font size -->
+    <!-- disable popupwindow    cancel by oumogang -->
+    <!--
+         <supports-screens
+        android:largeScreens="true"
+        android:smallScreens="true"
+        android:anyDensity="true"
+        android:normalScreens="true"
+        ></supports-screens>
+    -->
+
+</manifest>

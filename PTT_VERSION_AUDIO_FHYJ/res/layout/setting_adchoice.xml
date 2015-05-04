@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/ddd" />
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/audio_set"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dip"
+                    android:text="@string/setting_voice_call"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="20dip"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider"
+                android:paddingTop="3dip" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/video_set"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dip"
+                    android:text="@string/setting_vedio_call"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="20dip"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider"
+                android:paddingTop="3dip" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groupcallcoming_set"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dip"
+                    android:background="@android:drawable/list_selector_background"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/setting_intercom_call"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/summary_list"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="20dip"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider"
+                android:paddingTop="3dip" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/postion_set"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dip"
+                    android:text="@string/setting_position"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="20dip"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/postion_set_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider"
+                  android:orientation="horizontal"
+                android:paddingTop="3dip" >
+            </LinearLayout>
+            
+            <!-- 定时亮屏设置  -->
+            <LinearLayout
+                android:id="@+id/screen_wakeup_set"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical" >
+				
+				<LinearLayout
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:orientation="vertical" >
+				
+				    <TextView
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_gravity="center_vertical"
+				        android:gravity="center_vertical"
+				        android:paddingLeft="10dip"
+				        android:text="@string/setting_screen_wakeup"
+				        android:textAppearance="?android:attr/textAppearanceMedium" />
+				
+				    <TextView
+				        android:id="@+id/current_screen_wakeup_period_info"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:paddingLeft="10dip"
+				        android:text="@string/language_d"
+				        android:textAppearance="?android:attr/textAppearanceSmall" />
+				</LinearLayout>
+				<RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="20dip"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/postion_set_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider"
+                  android:orientation="horizontal"
+                android:paddingTop="3dip" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/registertime_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dip"
+                    android:text="@string/setting_register"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/registertime_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dip"
+                    android:text="18000毫秒"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </LinearLayout>
+ 			<LinearLayout
+ 			    android:id="@+id/register_internal"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider"
+                  android:orientation="horizontal"
+                android:paddingTop="3dip" >
+            </LinearLayout>
+            
+			<LinearLayout
+                android:id="@+id/bluetooth_set"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="蓝牙手咪"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/bluetooth_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/rate_suspension_2"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <!--
+                         <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:gravity="center_vertical"
+                        android:paddingRight="10dip" />
+                    -->
+
+                    <com.zed3.utils.SwitchButton
+                        android:id="@+id/bluetooth_onoff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:gravity="center_vertical" />
+                    <!--
+                         <com.zed3.settings.SlipButton
+                        android:id="@+id/encrypt_onoff"
+                        android:layout_width="68dip"
+                        android:layout_height="30dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dip"
+                        android:gravity="center_vertical" />
+                    -->
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider"
+                android:paddingTop="3dip" >
+            </LinearLayout>
+
+            <LinearLayout 
+                android:id="@+id/msgencry_set"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/setting_signalling"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/msgencry_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/encryption_2"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <!--
+                         <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:gravity="center_vertical"
+                        android:paddingRight="10dip" />
+                    -->
+
+                    <com.zed3.utils.SwitchButton
+                        android:id="@+id/encrypt_onoff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:gravity="center_vertical" />
+                    <!--
+                         <com.zed3.settings.SlipButton
+                        android:id="@+id/encrypt_onoff"
+                        android:layout_width="68dip"
+                        android:layout_height="30dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dip"
+                        android:gravity="center_vertical" />
+                    -->
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/msgencry_set_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider"
+                android:orientation="horizontal"
+                android:paddingTop="3dip" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/flowOnOff"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/rate_suspension_title"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/flowonoff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/rate_suspension_2"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <!--
+                         <com.zed3.settings.SlipButton
+                        android:id="@+id/flow_ctrl"
+                        android:layout_width="68dip"
+                        android:layout_height="30dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dip"
+                        android:gravity="center_vertical" />
+                    -->
+
+                    <com.zed3.utils.SwitchButton
+                        android:id="@+id/flow_ctrl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:gravity="center_vertical" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/flowOnOff_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider"
+                android:orientation="horizontal"
+                android:paddingTop="3dip" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/logOnOff"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/setting_log"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/logsummary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/rate_suspension_1"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <!--
+                         <com.zed3.settings.SlipButton
+                        android:id="@+id/log_ctrl"
+                        android:layout_width="68dip"
+                        android:layout_height="30dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dip"
+                        android:gravity="center_vertical" />
+                    -->
+
+                    <com.zed3.utils.SwitchButton
+                        android:id="@+id/log_ctrl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:gravity="center_vertical" />
+                </RelativeLayout>
+            </LinearLayout>
+            
+             <LinearLayout
+                 android:visibility="visible"
+                 android:id="@+id/log_onoff_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                  android:orientation="horizontal"
+                android:background="?android:attr/listDivider"
+                android:paddingTop="3dip" >
+            </LinearLayout>
+
+              <!-- GQT 英文版 实现多语言切换功能 -->
+           <LinearLayout             
+                android:id="@+id/language"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/language_title"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/currentLanguage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/language_d"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+
+                     <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="20dip"
+                        android:src="@drawable/arrow" />
+                </RelativeLayout>
+            </LinearLayout>
+ 			
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider"
+                android:paddingTop="3dip" >
+            </LinearLayout>
+             
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/WakeUpOnOff"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="休眠唤醒开关"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/wakeupsummary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/rate_suspension_1"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+
+                    <com.zed3.utils.SwitchButton
+                        android:id="@+id/wakeup_swt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:gravity="center_vertical" />
+                </RelativeLayout>
+            </LinearLayout>
+ 			
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider"
+                android:paddingTop="3dip" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gpsOnOff"
+                android:layout_width="fill_parent"
+                android:layout_height="55dip"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/position_switch"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/gpssummary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dip"
+                        android:text="@string/rate_suspension_2"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+
+                    <!--
+                         <com.zed3.settings.SlipButton
+                        android:id="@+id/gps_ctrl"
+                        android:layout_width="68dip"
+                        android:layout_height="30dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dip"
+                        android:gravity="center_vertical" />
+                    -->
+
+                    <com.zed3.utils.SwitchButton
+                        android:id="@+id/gps_ctrl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dip"
+                        android:gravity="center_vertical" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bgdate_show"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:background="@android:drawable/list_selector_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dip"
+                    android:text="查看后台数据"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </LinearLayout>
+            <!--
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider"
+                android:paddingTop="3dip" >
+            </LinearLayout>
+            -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider"
+                android:paddingTop="3dip"
+                android:visibility="gone" >
+            </LinearLayout>
+           
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

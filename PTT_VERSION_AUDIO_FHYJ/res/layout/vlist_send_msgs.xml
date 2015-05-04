@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF" >
+
+    <!-- 第一行 -->
+
+    <ImageView
+        android:id="@+id/imgRightDot"
+        android:layout_width="10dip"
+        android:layout_height="10dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="3dip"
+        android:background="@drawable/dot" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dip"
+        android:layout_toLeftOf="@id/imgRightDot"
+        android:text="2011-0614 04:4:56"
+        android:textSize="13sp" />
+
+    <!-- 第二行 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDate"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/txtSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dip"
+            android:singleLine="true"
+            android:text="@string/sending"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtMsgContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_send_message"
+            android:gravity="center_vertical"
+            android:text="111122222222222222222222222222222222222222222111111111"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>

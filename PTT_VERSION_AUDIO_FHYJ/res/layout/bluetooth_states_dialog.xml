@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- CONNEECT STATE -->
+    <!-- adapter STATE -->
+    <!-- SCO STATE -->
+    <!-- SPP STATE -->
+
+	<TextView  
+	     android:id="@+id/states_title"
+	         android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+                android:background="#FFFFFFFF"
+                android:gravity="center"
+                android:padding="5dip"
+                android:textSize="20sp"
+                android:text="@string/bl_status"/>
+    <ScrollView 
+         android:layout_width="match_parent"
+         android:id="@+id/states_textview"
+         android:layout_toRightOf="@+id/states_views"
+         android:layout_below="@+id/states_title"
+         android:background="#FF888888"
+         android:padding="5dip"
+         android:layout_height="match_parent">
+         <TextView  
+	         android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+	         android:id="@+id/state_tv"
+	         android:padding="5dip"
+	         android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:textColor="#FFFFFFFF" 
+                android:gravity="left"
+                android:text="@string/bl_status_records"/>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="50dip"
+        android:id="@+id/states_views"
+        android:layout_below="@+id/states_title"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="3dip"
+        android:layout_marginRight="3dip"
+        android:layout_marginTop="3dip" >
+
+        <RelativeLayout
+            android:layout_width="50dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top" >
+
+            <TextView
+                android:id="@+id/sco_state_tv"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dip"
+                android:layout_marginRight="3dip"
+                android:background="#be0a0b"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:text="SCO CONNE"
+                android:textColor="@color/tab_wihte" />
+
+            <TextView
+                android:id="@+id/sco_onoff_state_tv"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/sco_state_tv"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dip"
+                android:layout_marginRight="3dip"
+                android:background="#be0a0b"
+                android:gravity="center"
+                android:text="SCO ONOFF"
+                android:textSize="13sp"
+                android:textColor="@color/tab_wihte" />
+            <TextView
+                android:id="@+id/speakerphone_onoff_state_tv"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/sco_onoff_state_tv"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dip"
+                android:layout_marginRight="3dip"
+                android:background="#be0a0b"
+                android:gravity="center"
+                android:text="SPEAKER ONOFF"
+                android:textSize="13sp"
+                android:textColor="@color/tab_wihte" />
+            <TextView
+                android:id="@+id/spp_state_tv"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/speakerphone_onoff_state_tv"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dip"
+                android:layout_marginRight="3dip"
+                android:background="#be0a0b"
+                android:gravity="center"
+                android:text="SPP  CONNE"
+                android:textSize="13sp"
+                android:textColor="@color/tab_wihte" />
+
+            <TextView
+                android:id="@+id/bluetooth_adapter_state_tv"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/spp_state_tv"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dip"
+                android:layout_marginRight="3dip"
+                android:background="#be0a0b"
+                android:gravity="center"
+                android:text="@string/blue_switch"
+                android:textSize="13sp"
+                android:textColor="@color/tab_wihte" />
+
+            <TextView
+                android:id="@+id/spp_device_bt"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/bluetooth_adapter_state_tv"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dip"
+                android:layout_marginRight="3dip"
+                android:background="#be0a0b"
+                android:gravity="center"
+                android:text="@string/bl_hm_2"
+                android:visibility="gone"
+                android:textSize="13sp"
+                android:textColor="@color/tab_wihte" />
+            
+            <TextView 
+                android:id="@+id/ptt_state_tv"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/spp_device_bt"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dip"
+                android:layout_marginRight="3dip"
+                android:background="#be0a0b"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:text="PTT  ONOFF"
+                android:textColor="@color/tab_wihte"/>
+            <Button 
+                android:id="@+id/setting_bt"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/ptt_state_tv"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:text="@string/settings"
+                android:textSize="13sp"
+                android:textColor="@color/tab_wihte"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

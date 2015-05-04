@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string-array name = "groupcall_menu_item_name_array">
+		<item>"设置"</item>
+		<item>"组呼"</item>  
+	    <item>"组呼"</item>  
+	    <item>"退出"</item>  
+	</string-array>
+	<string-array name = "siglecall_menu_item_name_array">
+		<item>"设置"</item>
+		<item>"单呼"</item>  
+	    <item>"单呼"</item>  
+	    <item>"退出"</item>  
+	</string-array>
+	<string-array name = "message_menu_item_name_array">
+		<item>"设置"</item>
+		<item>"短信"</item>  
+	    <item>"短信"</item>  
+	    <item>"退出"</item>  
+	</string-array>
+	
+</resources>
+

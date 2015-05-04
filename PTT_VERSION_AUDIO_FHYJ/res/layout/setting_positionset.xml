@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/ddd" />
+
+    <LinearLayout
+        android:background="@android:drawable/list_selector_background"
+        android:layout_width="fill_parent"
+        android:layout_height="68dip"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:id="@+id/locate_mode"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:text="@string/setting_position"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:id="@+id/pos_mode"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+    </LinearLayout>
+
+   <LinearLayout android:layout_width="fill_parent" android:paddingTop="3dip"
+       android:layout_height="1dip"
+       android:background="?android:attr/listDivider"
+       ></LinearLayout>
+   <LinearLayout
+       android:visibility="gone"
+       android:background="@android:drawable/list_selector_background"
+        android:layout_width="fill_parent"
+        android:layout_height="68dip"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:id="@+id/gps_opentype"
+        android:orientation="vertical" >
+
+        <TextView
+            android:paddingLeft="10dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+            android:paddingLeft="10dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gps_openMode"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+    </LinearLayout>
+
+   <LinearLayout android:layout_width="fill_parent" android:paddingTop="3dip"
+       android:layout_height="1dip"
+        android:visibility="gone"
+       android:background="?android:attr/listDivider"
+       ></LinearLayout>
+     <LinearLayout
+         android:background="@android:drawable/list_selector_background"
+        android:layout_width="fill_parent"
+        android:layout_height="68dip"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:id="@+id/gps_onoff"
+        android:orientation="horizontal" >
+	<LinearLayout android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    >
+        <TextView
+            android:paddingLeft="10dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+            android:paddingLeft="10dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gps_ctrlsummary"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            >
+            <CheckBox android:id="@+id/gps_ctrl" android:layout_alignParentRight="true"
+                android:paddingRight="10dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:checked="false"
+                android:clickable="false"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+   <LinearLayout android:layout_width="fill_parent" android:paddingTop="3dip"
+       android:layout_height="1dip"
+       android:background="?android:attr/listDivider"
+       ></LinearLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/call_history_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="#e3e6eb"
+        android:dividerHeight="1dip"
+        android:paddingLeft="3.0dip"
+        android:paddingRight="3.0dip" >
+    </ListView>
+    <!-- android:dividerHeight="3.0dip" android:focusable="true"-->
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/history_baseline"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/call_history_list"
+        android:background="@color/holo_blue_light" >
+    </LinearLayout>
+</RelativeLayout>
