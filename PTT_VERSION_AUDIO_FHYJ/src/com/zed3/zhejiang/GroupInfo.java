@@ -12,6 +12,11 @@ public class GroupInfo {
 			public  String memberNumber = "";
 			public  String memberName = "";
 		}
+		@Override
+		public String toString() {
+			return "GroupInfo [groupNumber=" + groupNumber + ", groupName="
+					+ groupName + ", groupMember=" + groupMember + "]";
+		}
 	
 
 }
